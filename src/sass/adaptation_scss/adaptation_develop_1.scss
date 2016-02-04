@@ -22,6 +22,29 @@
 }
 @media screen and (max-width: 1024px){
 
+	/* header */
+
+		.header{
+			&:after{display: none;}
+			.mobile-field{display: block;}
+			.mbox{padding:0 15px;
+				&:before{content: '';display: block;position: absolute;left: 0;top:100%;right: 0;height: 39px;background-image:url(../images/header-background-img.png);z-index: 1;}
+			}
+			.header-logo{display: none;}
+			.header-logo-mobile{display: block;}
+			.header-navigate-wrap{margin-left: 0;position: static;width: auto;
+				.sendwich-icon-wrap{display: block;}
+				.header-navigate-main{display: block;position: absolute;top:-100%;background-color: #f4f4f4;margin-left: -15px;z-index: 0;
+					&:after{content:'';display:block;position: absolute;width:100%;top:100%;left: 0;background-image:url(../images/header-background-img-sendwich.png);background-repeat: repeat-x;height: 39px;background-position: 30% 0;}
+					.header-menu{display: block;
+						li{display:block;margin-bottom: 10px;}
+					}
+				}
+			}
+		}
+
+	/* /header */
+
 }
 @media screen and (max-width: 992px){
 
