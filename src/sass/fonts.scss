@@ -19,4 +19,13 @@
 @include font-face('slick');
 @include font-face('bootstrap-icon', 'glyphicons-halflings-regular');
 
+@include font-face('PFDinTextPro', 'PFDinTextPro-Thin',100);
+@include font-face('PFDinTextPro', 'PFDinTextPro-Light',300);
+@include font-face('PFDinTextPro', 'PFDinTextPro-Regular',400);
+@include font-face('PFDinTextPro', 'PFDinTextPro-Medium',500);
+@include font-face('PFDinTextPro', 'PFDinTextPro-Bold',700);
+
+@include font-face('Posterizer', 'Posterizer_KG_Sketch');
+
+
 /* /fonts*/
