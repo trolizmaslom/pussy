@@ -1,8 +1,12 @@
 <!-- HEADER -->
-<header>
+<header class="header">
 
 	<div class="mbox">
 		
+		<div class="header-logo-mobile">
+			<img src="images/header-logo.png" alt="" />
+		</div>
+
 		<!-- enter & busked -->
 		<div class="header-links-wrap">
 
@@ -14,7 +18,7 @@
 					<div class="enter-wrap-icon"></div>
 				</div>
 
-				<div class="header-form"> <!-- style="display: none;" -->
+				<div class="header-form" style="display: none;"> <!-- style="display: none;" -->
 					<div class="header-enter-title">Войдите в личный кабинет или зарегестрируйтесь</div>
 					<form class="header-form-main form">
 						<div class="form_row">
@@ -74,7 +78,9 @@
 				<a href="#busked">
 					<span class="busked-text">Корзина</span>
 					<span class="busked-icon">
-						<span class="basked-icon-value"></span>
+						<span class="basked-icon-value">
+							<span>2</span>
+						</span>
 					</span>
 				</a>
 			</div>
@@ -89,8 +95,12 @@
 					<li>
 						<a href="#">Главная</a>
 					</li>
-					<li class="second-level">
+					<li>
 						<a href="#">Каталог</a>
+					</li>
+					<li class="second-level active">
+						<div class="second-level-icon"></div>
+						<a href="#">Новости</a>
 						<ul>
 							<li>
 								<a href="#">О нас</a>
@@ -102,9 +112,6 @@
 								<a href="#">статьи</a>
 							</li>
 						</ul>
-					</li>
-					<li>
-						<a href="#">Новости</a>
 					</li>
 				</ul>
 			</div>
