@@ -1,0 +1,26 @@
+/*like-massonry*/
+.like-massonry{
+    .like-massonry-grid{}
+    a{display: block;}
+    .item-left{float: left;width: 26.5%;padding-right: 20px;
+        .item_1{background-color: pink;margin-bottom: 20px;}
+        .item_2{background-color: blue;}
+    }
+    .item-right{float: left;width: 73.5%;
+        .item-top{margin-bottom: 20px;
+            .item-top-left{float: left;width: 36%;padding-right: 20px;
+                .item_3{background-color: green;}
+            }
+            .item-top-right{float: left;width: 64%;
+                .item_4{background-color: yellow;margin-bottom: 20px;}
+                .item_5{background-color: red;}
+            }
+        }
+        .item-bottom{
+            .item-bottom-left{padding-right: 20px;float: left;width: 64%;}
+            .item_6{background-color: tomato;float: left;width: 100%;}
+            .item_7{background-color: aqua;float: left;width: 36%;}
+        }
+    }
+}
+/*/like-massonry*/
