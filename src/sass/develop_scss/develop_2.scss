@@ -1,0 +1,17 @@
+.title-text{ font-family: 'Posterizer'; font-size: 62px; line-height: 72px;}
+
+#last-news{ background-image: url(../images/bg-l1-cat.png); background-size: 1920px 485px; background-position: right bottom; background-repeat: no-repeat; padding-bottom: 116px;
+    .wrap-last{background-image: url(../images/bg-l2-cat.jpg); background-size: 367px 419px; background-position: left bottom; background-repeat: no-repeat;
+        .content-last{color: #e5a165;}
+    }
+}
+
+.items-wrap{ width: 100%; color: black;
+    .item-inside{ float: left; width: 33.3333%;
+        .image-block{width: 100%; height: auto; border-radius: 2px;}
+        .after-text{ font-family: 'PFDinTextPro'; font-size: 18px; line-height: 26px; font-weight: 500; color: #454545;}
+        .lapische{width: 100%; height:14px; background-image: url(../images/lapische.png); background-repeat: no-repeat; }
+        .undertext{font-family: 'PFDinTextPro'; font-size: 14px; line-height: 20px; font-weight: 400; color: #454545;}
+    }
+}
+
