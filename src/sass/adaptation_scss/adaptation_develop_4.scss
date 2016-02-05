@@ -15,7 +15,16 @@
     .paral-cat-2{display: none;}
 }
 @media screen and (max-width: 1024px){
-
+    /*top-block*/
+    .top-block{background-position-x: 28%;min-height: 700px;
+        .top-block-text{padding-top: 230px;padding-right: 60px;}
+        .title-text{font-size: 65px; }
+        .lapische{}
+        .description{
+            p{}
+        }
+    }
+    /*/top-block*/
 }
 @media screen and (max-width: 992px){
     /*like-massonry*/
@@ -64,6 +73,19 @@
         .item-left{width: 95%;}
         .item-right{width: 95%;}
     }
+
+    /*top-block*/
+    .top-block{min-height: 700px;background-size: cover;background-position: 20% center;
+        .top-block-text{text-align: center;padding-right: 0;padding-top: 265px;}
+        .title-text{font-size: 62px; 
+            &:after{display: none;}
+        }
+        .lapische{}
+        .description{
+            p{max-width: 420px;}
+        }
+    }
+    /*/top-block*/
 }
 @media screen and (max-width: 479px){
     /*like-massonry*/
@@ -97,6 +119,17 @@
         }
         .title-text{padding-top: 35px;}
     }
+
+    /*top-block*/
+    .top-block{min-height: 560px;background-size: cover;background-position: 20% center;
+        .top-block-text{padding-top: 123px;}
+        .title-text{font-size: 48px;line-height: 46px; }
+        .lapische{}
+        .description{
+            p{max-width: 420px;}
+        }
+    }
+    /*/top-block*/
 }
 @media screen and (max-width: 320px){
 

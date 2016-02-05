@@ -44,3 +44,55 @@
 
 }
 /*/like-massonry*/
+
+/*top-block*/
+.top-block{min-height: 770px;background: url('../images/top-blog-bg.jpg') center 0% no-repeat;background-attachment: fixed;position: relative;
+    &:after{content: '';background: url('../images/header-background-img.png') left top;height: 39px;width: 100%;bottom: 0;left: 0;position: absolute;background-repeat: repeat-x;transform: rotateZ(-180deg);}
+    .top-block-text{padding-top: 230px;text-align: right;}
+    .title-text{color: #e5a165;font-size: 72px;position: relative;z-index: 1;padding-bottom: 10px;
+        &:after{content: '';height: 61px;width: 61px;position: absolute;right: -68px;top: -56%;background: url('../images/cookie.png') center center no-repeat;z-index: 2;pointer-events:none;}
+    }
+    .lapische{height: 14px;max-width: 280px;width: 100%;background-image: url(../images/lapische.png);background-repeat: no-repeat;display: inline-block;}
+    .description{width: 100%;color: white;font-size: 16px;font-weight: 300;padding-top: 15px;padding-bottom: 45px;
+        p{max-width: 313px;display: inline-block;}
+    }
+}
+/*/top-block*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
