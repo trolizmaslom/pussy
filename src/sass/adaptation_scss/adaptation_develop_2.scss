@@ -14,12 +14,36 @@
 
 }
 @media screen and (max-width: 992px){
-
+    .convert-box-pop .single-item { float: none; width: 80%; margin: 20px 10%; padding-bottom: 60px;
+        .aftertext .pricing {width: 100px;}
+        .button-v-konce { width: auto;  bottom: 0;  right: 20%; left: 20%;
+            .button{max-width: 100%;}
+        }
+    }
+    #last-news .wrap-last {background-image: url(../images/header-background-img.png); background-repeat: repeat-x;background-position: right bottom; background-size: auto auto;     padding-bottom: 80px;
+            .convert-last {background-image: none;}
+    }
+    .items-wrap .item-inside { float: none; width: 80%; height: auto !important; margin: 20px auto;}
 }
 @media screen and (max-width: 767px){
 
 }
 @media screen and (max-width: 666px){
+    .convert-box-pop .single-item
+
+    #popular-item .popular-wrap { padding-top: 50px; padding-bottom: 80px;}
+
+    .convert-box-pop .single-item { float: none; width: 80%; margin: 20px 10%;
+        .aftertext .maming {width: calc(100% - 100px);}
+        .button-v-konce { width: auto;  bottom: 0;  right: 0%; left: 0%;
+            .button{max-width: 100%;}
+        }
+    }
+    .title-text{ font-family: 'Posterizer'; font-size: 46px; line-height: 72px; text-align: center;}
+
+    .items-wrap .item-inside .button-v-konce { width: auto;  bottom: 0;  right: 0%; left: 0%;
+        .button{max-width: 100%;}
+    }
 
 }
 @media screen and (max-width: 479px){

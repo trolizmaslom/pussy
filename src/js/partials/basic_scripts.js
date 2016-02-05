@@ -35,6 +35,39 @@ function oneHeightItems(){
     oneHeight($('.oneHeight'));
 }
 
+function oneHeightItemsMain1(){
+
+    function oneHeight(block){
+        var height=0;
+        block.removeAttr('style');
+        block.each(function(){
+            if($(this).height()>height){
+                height=$(this).height();
+            }
+        });
+        block.css('height', height);
+    }
+
+    oneHeight($('.single-item'));
+}
+
+function oneHeightItemsMain2(){
+
+    function oneHeight(block){
+        var height=0;
+        block.removeAttr('style');
+        block.each(function(){
+            if($(this).height()>height){
+                height=$(this).height();
+            }
+        });
+        block.css('height', height);
+    }
+
+    oneHeight($('.item-inside'));
+}
+
+
 /*scroll animation*/
 function animationBlock(item){
 
@@ -96,12 +129,17 @@ function cutText(){
 $(document).ready(function() {
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
+    if ($(window).width() > 993) {
+        oneHeightItemsMain2();
+    };
 
     //goTo();
     //animationBlock($('.setion-animate'));
 });
 
 $(window).resize(function() {
-
+    if ($(window).width() > 993) {
+        oneHeightItemsMain2();
+    };
     $('.footer_placeholder').height($('.footer').outerHeight());
 });
