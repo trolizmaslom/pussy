@@ -25,12 +25,12 @@ $border:#c48e58;
         }
     /*END popular-section*/
     /*catalog*/
-        .catalog{ padding-top: 134px;
+        .catalog{ padding-top: 134px; position: relative;
             .cat-wrap{
                 .title-text{h2{color:#d39f68;}padding-bottom: 35px;}
                 .cat-content{
                     aside{ width:100%; max-width: 270px; float:left;
-                        .cat-menu{ width:100%; max-width: 264px; box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.22);     padding-top: 16px;     padding-bottom: 13px; margin-bottom: 15px;
+                        .cat-menu{ width:100%; max-width: 264px; box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.22);     padding-top: 16px;     padding-bottom: 13px; margin-bottom: 15px; background-color: #fff;
                             .cat-menu-wrap{
                                 ul{width: 100%;
                                     li{padding-left: 21px; font: 400 14px/14px 'PFDinTextPro'; color:#47231a;  text-transform: uppercase; width:100%; position: relative; height: 27px; padding-top: 7px;
@@ -62,9 +62,10 @@ $border:#c48e58;
                             }
                         }
                     }
-                    .items-wrap{
-                        .pane-two{height: 881px; overflow: hidden;}
-                        .pane-three{display: flex; justify-content: space-around; flex-wrap: wrap; }
+                    .items-wrapp{width: calc(100% - 270px); float:left;
+                        #scroll-pane::-webkit-scrollbar { width: 0; }
+                        #scroll-pane{height: 881px; overflow: auto; width: 100%; overflow: -moz-scrollbars-none; -ms-overflow-style: none;}
+                       .pane-three{display: flex; justify-content: space-around; flex-wrap: wrap; }
                         .item{ height: 353px; max-width: 284px; width: 100%; overflow: hidden; position: relative; display: inline-block; margin-bottom: 5px;
                             &.big{max-width: 580px;
                                 .imgs{.img-wrap{max-width: 580px;}}
@@ -94,6 +95,9 @@ $border:#c48e58;
                         }
                     }
                 }
+            }
+            .like-mas-cats{position: absolute;top: 25%;left: 0%;pointer-events:none;
+                &.paral-cat-2{left: auto;right: 0%;top: auto;bottom: 7%}
             }
         }
     /*END catalog*/
