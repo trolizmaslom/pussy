@@ -5,10 +5,14 @@
 
 }
 @media screen and (max-width: 1366px){
-
+    /*like massonry*/
+    .paral-cat-1{max-width: 98px;}
+    .paral-cat-2{max-width: 98px;}
 }
 @media screen and (max-width: 1280px){
-
+    /*like massonry*/
+    .paral-cat-1{display: none;}
+    .paral-cat-2{display: none;}
 }
 @media screen and (max-width: 1024px){
 
@@ -25,7 +29,9 @@
         .grid_item{min-height: 220px;max-width: 300px;display: inline-block;width: calc(100% - 10px);vertical-align: top;margin-left: 5px;margin-right: 5px;}
         .item-left{float: none;padding-right: 0px;display: block;width: 74%;margin:0 auto;margin-bottom: 20px;
             .item_1{margin-bottom: 0px;width: calc(50% - 10px);float: left;}
-            .item_2{width: calc(50% - 10px);float: right;}
+            .item_2{width: calc(50% - 10px);float: right;
+                a{background-position: center 27%;}
+            }
         }
         .item-right{float: none;width: 74%;margin:0 auto;
             .item-top{margin-bottom: 20px;
@@ -34,7 +40,9 @@
                 }
                 .item-top-right{float: left;width: 50%;
                     .item_4{margin-bottom: 20px;float: right;}
-                    .item_5{float: right;}
+                    .item_5{float: right;
+                        a{background-position: 66% center;}
+                    }
                 }
             }
             .item-bottom{
@@ -83,8 +91,8 @@
             }
             .item-bottom{
                 .item-bottom-left{float: none;width:100%;}
-                .item_6{float: left;width: calc(100% - 10px);margin-bottom: 20px;}
-                .item_7{float: right;width: calc(100% - 10px);}
+                .item_6{float: none;width: calc(100% - 10px);margin-bottom: 20px;}
+                .item_7{float: none;width: calc(100% - 10px);}
             }
         }
         .title-text{padding-top: 35px;}
