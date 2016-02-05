@@ -2,15 +2,15 @@ $border:#c48e58;
 /*katalog*/
     /*popular-section*/
         .popular-items{
-            .pop-wrap{
-                .title-text{h2{color:#d39f68;}}
+            .pop-wrap{padding-bottom: 86px;
+                .title-text{    padding-bottom: 40px; h2{color:#d39f68;}}
                 .pop-content{display: flex; justify-content: space-around; flex-wrap: wrap;
                     .item{  width:100%; max-width: 288px; height: 137px; display: block; position: relative; overflow: hidden; vertical-align: top;
                         .imgs{position: relative; overflow: hidden; width:100%; max-width: 288px; height: 137px;border:3px solid $border; border-radius: 7px;     transform: translateZ(-1px);
                             img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px) scale(1.1) rotate(0); transition: transform 500ms; }
                             .bgc{background-color: rgba(0,0,0, 0.5);  position: absolute; top:0;  width:100%; height:100%;  transition: background-color 500ms;}
                         }
-                        .txt{  position: absolute; top:0; width:100%; text-align: center; padding-top: 50px;
+                        .txt{  position: absolute; top:0; width:100%; text-align: center; padding-top: 54px;
                             p{font: 700 24px/24px 'PFDinTextPro'; color: #fff; text-transform: uppercase; }
                         }
                         &:hover{
@@ -25,15 +25,15 @@ $border:#c48e58;
         }
     /*END popular-section*/
     /*catalog*/
-        .catalog{
+        .catalog{ padding-top: 134px;
             .cat-wrap{
-                .title-text{h2{color:#d39f68;}}
+                .title-text{h2{color:#d39f68;}padding-bottom: 35px;}
                 .cat-content{
-                    aside{
-                        .cat-menu{ width:100%; max-width: 264px; box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.22);
+                    aside{ width:100%; max-width: 270px; float:left;
+                        .cat-menu{ width:100%; max-width: 264px; box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.22);     padding-top: 16px;     padding-bottom: 13px; margin-bottom: 15px;
                             .cat-menu-wrap{
                                 ul{width: 100%;
-                                    li{padding-left: 21px; font: 400 14px/14px 'PFDinTextPro'; color:#47231a;  text-transform: uppercase; width:100%; position: relative; height: 27px;
+                                    li{padding-left: 21px; font: 400 14px/14px 'PFDinTextPro'; color:#47231a;  text-transform: uppercase; width:100%; position: relative; height: 27px; padding-top: 7px;
                                         &:before{content: ''; display: block; width:243px; height: 1px; position: absolute; background-color: #e5cdb4; right:0; bottom:0;}
                                         &:after{content: ''; display: block; position: absolute; bottom: 1px; left:21px; height: 4px; background-color: #debc97; width:171px; border-radius: 0 30px 0 0; opacity: 0; transition: opacity 500ms;}
                                         &:hover{background-color: #f0e5da;}
@@ -43,7 +43,7 @@ $border:#c48e58;
                                 }
                             }
                         }
-                        .cat-sale{border:1px solid $border;  width:100%; max-width: 266px; height: 192px; display: block; position: relative; overflow: hidden;
+                        .cat-sale{border:1px solid $border;  width:100%; max-width: 266px; height: 192px; display: block; position: relative; overflow: hidden; margin-bottom: 15px;
                             .imgs{position: relative; overflow: hidden; width:100%; max-width: 264px; height: 190px;
                                 img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px) scale(1.1) rotate(0); transition: transform 500ms;}
 
@@ -63,22 +63,33 @@ $border:#c48e58;
                         }
                     }
                     .items-wrap{
-                        .item{ height: 253px; max-width: 284px; width: 100%; overflow: hidden;
-                            .imgs{
-                                .img-wrap{ position: relative; overflow: hidden;
+                        .pane-two{height: 881px; overflow: hidden;}
+                        .pane-three{display: flex; justify-content: space-around; flex-wrap: wrap; }
+                        .item{ height: 353px; max-width: 284px; width: 100%; overflow: hidden; position: relative; display: inline-block; margin-bottom: 5px;
+                            &.big{max-width: 580px;
+                                .imgs{.img-wrap{max-width: 580px;}}
+                            }
+                            .imgs{position: relative;
+                                .img-wrap{ position: relative; overflow: hidden; height: 211px; max-width: 284px; width: 100%; border:1px solid $border; background-color: #fff;
                                     img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px); }
                                 }
-                                .round{ text-align: center; border-radius: 50%; width:71px; height: 71px; border:4px solid #fff;
-                                    p{font: 700 14px/14px 'PFDinTextPro'; color:#fff;}
+                                .round{ text-align: center; border-radius: 50%; width:71px; height: 71px; border:4px solid #fff; background-image: url(../images/round-bg.png); left: 50%; transform: translate(-50%, -50%); position: absolute;     padding-top: 24px;
+                                    p{font: 700 14px/14px 'PFDinTextPro'; color:#fff; text-transform: uppercase;}
                                 }
                             }
-                            .txt{
-                                .item-title{font: 400 14px/14px 'PFDinTextPro'; color:#47231a;}
-                                .item-price{font: 400 12px/12px 'PFDinTextPro'; color:#be864d;
+                            .txt{ background-color: #fff;    border:none; padding: 32px 40px 0;     height: 142px; transition: border 500ms;
+                                .item-title{font: 400 14px/17px 'PFDinTextPro'; color:#47231a; width: 100%; max-width: 200px; text-align: center; margin-bottom: 4px; height: 34px; overflow: hidden;  margin: 0 auto;}
+                                .item-price{font: 400 12px/12px 'PFDinTextPro'; color:#be864d;width: 100%;text-align: center;
                                     b{font: 700 20px/20px 'PFDinTextPro'; color:#be864d;}
                                 }
-
-                                .button{font: 700 12px/12px 'PFDinTextPro'; color:#ab5e15; text-transform: uppercase; text-decoration: none;border-radius: 50%; width:158px; height: 35px; border-radius: 15px; border:2px solid #d79553; background-color: #fff; text-align: center; background-image: none;}
+                                .buttons{font: 700 12px/12px 'PFDinTextPro'; color:#ab5e15; text-transform: uppercase; text-decoration: none;border-radius: 50%; width:158px; height: 35px; border-radius: 15px; border:2px solid #d79553; background-color: #fff; text-align: center; background-image: none; display: block; left:50%; bottom: 13px; position: absolute; opacity:0;transform: translateX(-50%);     padding-top: 9px; transition: opacity 500ms, background-color 500ms, color 500ms ;
+                                    &:hover{background-color: #d79553; color:#fff;}
+                                }
+                            }
+                            &:hover{
+                                .txt{background-color: #f0f0f0;  border:1px solid $border; border-top: none;
+                                    .buttons{opacity:1;}
+                                }
                             }
                         }
                     }
@@ -87,3 +98,4 @@ $border:#c48e58;
         }
     /*END catalog*/
 /*END katalog*/
+body{background-color: #fff;}
