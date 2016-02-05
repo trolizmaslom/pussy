@@ -5,7 +5,7 @@ $border:#c48e58;
             .pop-wrap{padding-bottom: 86px;
                 .title-text{    padding-bottom: 40px; h2{color:#d39f68;}}
                 .pop-content{display: flex; justify-content: space-around; flex-wrap: wrap;
-                    .item{  width:100%; max-width: 288px; height: 137px; display: block; position: relative; overflow: hidden; vertical-align: top;
+                    .item{  width:100%; max-width: 288px; height: 137px; display: block; position: relative; overflow: hidden; vertical-align: top; margin-bottom: 10px;
                         .imgs{position: relative; overflow: hidden; width:100%; max-width: 288px; height: 137px;border:3px solid $border; border-radius: 7px;     transform: translateZ(-1px);
                             img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px) scale(1.1) rotate(0); transition: transform 500ms; }
                             .bgc{background-color: rgba(0,0,0, 0.5);  position: absolute; top:0;  width:100%; height:100%;  transition: background-color 500ms;}
@@ -62,9 +62,12 @@ $border:#c48e58;
                             }
                         }
                     }
-                    .items-wrapp{width: calc(100% - 270px); float:left;
-                        #scroll-pane::-webkit-scrollbar { width: 0; }
-                        #scroll-pane{height: 881px; overflow: auto; width: 100%; overflow: -moz-scrollbars-none; -ms-overflow-style: none;}
+                    .items-wrapp{width: calc(100% - 270px); float:left; position: relative; margin-bottom: 58px;
+                        .otbivka{width: calc(100% + 270px); position: absolute; bottom: -1px; height: 1px; background-color: $border; left: -270px;
+                            &:before{content: ''; display: block; position: absolute; width: 33px; height: 4px; border-top:1px solid $border; border-bottom:1px solid $border; left:50%; transform:translateX(-50%); bottom: -11px;}
+                        }
+                        #scroll-pane{height: 881px; overflow: auto; width: 100%; }
+                        .jspVerticalBar{display: none;}
                        .pane-three{display: flex; justify-content: space-around; flex-wrap: wrap; }
                         .item{ height: 353px; max-width: 284px; width: 100%; overflow: hidden; position: relative; display: inline-block; margin-bottom: 5px;
                             &.big{max-width: 580px;
