@@ -45,15 +45,33 @@
     }
 }
 .conteiner-inside{
-    .news-lol-scroll{position: relative;color: black;
+    //.jspContainer { width: 100%; height: 500px; overflow: auto; }
+    //.jspPane{position: relative; width: 100% !important; margin-left :0 !important;}
+
+    .config-comn{ width: 100%;}
+
+    .news-lol-scroll{position: relative;color: black; width: 100%; height: 300px;
+
         h3{display: table; padding-bottom: 30px;position: relative; margin-bottom: 30px;
             span{position: relative; display: table-cell; font-family: 'PFDinTextPro'; font-size: 24px; line-height: 26px; font-weight: 500; }
             &:after{content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 14px;background-image: url(../images/lapische.png); background-repeat: repeat-x; }
         }
-        i{ position: absolute; top: 0; right: 0; font-family: 'PFDinTextPro'; font-size: 24px; line-height: 26px; font-weight: 500;}
+        i{ position: absolute; top: 0; right: 40px; font-family: 'PFDinTextPro'; font-size: 24px; line-height: 26px; font-weight: 500;}
         p{font-family: 'PFDinTextPro'; font-size: 18px; line-height: 24px; font-weight: 400;}
     }
 }
 
-body{background-color: white;}
+body{background-color: white; min-height: 0 ;}
+.scroll-pane
+{
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+}
+.horizontal-only
+{
+    height: auto;
+    max-height: 200px;
+}
+
 
