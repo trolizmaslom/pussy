@@ -1,8 +1,14 @@
 <!-- HEADER -->
-<header>
+<header class="header">
 
 	<div class="mbox">
 		
+		<div class="mobile-field"></div>
+
+		<div class="header-logo-mobile">
+			<img src="images/header-logo.png" alt="" />
+		</div>
+
 		<!-- enter & busked -->
 		<div class="header-links-wrap">
 
@@ -14,7 +20,7 @@
 					<div class="enter-wrap-icon"></div>
 				</div>
 
-				<div class="header-form"> <!-- style="display: none;" -->
+				<div class="header-form" style="display: none;"> <!-- style="display: none;" -->
 					<div class="header-enter-title">Войдите в личный кабинет или зарегестрируйтесь</div>
 					<form class="header-form-main form">
 						<div class="form_row">
@@ -74,7 +80,9 @@
 				<a href="#busked">
 					<span class="busked-text">Корзина</span>
 					<span class="busked-icon">
-						<span class="basked-icon-value"></span>
+						<span class="basked-icon-value">
+							<span>2</span>
+						</span>
 					</span>
 				</a>
 			</div>
@@ -84,44 +92,55 @@
 		<!-- menu & logo -->
 		<div class="header-navigate-wrap">
 
-			<div class="header-menu header-left">
-				<ul>
-					<li>
-						<a href="#">Главная</a>
-					</li>
-					<li class="second-level">
-						<a href="#">Каталог</a>
-						<ul>
-							<li>
-								<a href="#">О нас</a>
-							</li>
-							<li>
-								<a href="#">рекомендации</a>
-							</li>
-							<li>
-								<a href="#">статьи</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Новости</a>
-					</li>
-				</ul>
+			<div class="sendwich-icon-wrap">
+				<div class="sedwich-icon">
+					<span></span>
+				</div>
 			</div>
 
-			<div class="header-logo">
-				<img src="images/header-logo.png" alt="" />
-			</div>
+			<div class="header-navigate-main">
 
-			<div class="header-menu header-right">
-				<ul>
-					<li>
-						<a href="#">доставка</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
-					</li>
-				</ul>
+				<div class="header-menu header-left">
+					<ul>
+						<li>
+							<a href="#">Главная</a>
+						</li>
+						<li>
+							<a href="#">Каталог</a>
+						</li>
+						<li class="second-level active">
+							<div class="second-level-icon"></div>
+							<a href="#">Новости</a>
+							<ul>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+								<li>
+									<a href="#">рекомендации</a>
+								</li>
+								<li>
+									<a href="#">статьи</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="header-logo">
+					<img src="images/header-logo.png" alt="" />
+				</div>
+
+				<div class="header-menu header-right">
+					<ul>
+						<li>
+							<a href="#">доставка</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 
 		</div>
