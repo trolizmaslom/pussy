@@ -86,11 +86,15 @@
 			.enter-wrap-link{cursor: pointer;
 				&:hover{
 					.enter-wrap-text{color:#90bcb2;}
-					.enter-wrap-icon{border-color:#90bcb2 transparent transparent transparent;}
+					.enter-wrap-icon{border-color:#90bcb2 transparent transparent transparent;transform:rotate(0deg);}
 				}
 			}
 			.enter-wrap-text{display: inline-block;font-size: 14px;font-weight: 700;color:#52383d;text-transform: uppercase;transition:color 300ms ease;}
-			.enter-wrap-icon{display: inline-block;vertical-align: middle;width: 0;height: 0;border-width: 5px 4px 0 4px;border-color:#52383d transparent transparent transparent;border-style:solid;transition:border-color 300ms ease;}
+			.enter-wrap-icon{display: inline-block;vertical-align: middle;width: 0;height: 0;margin-top:-2px;border-width: 5px 4px 0 4px;border-color:#52383d transparent transparent transparent;border-style:solid;transform:rotate(-90deg);transform-origin:50% 50%;transition:border-color 300ms ease, transform 300ms ease;}
+			&.active{
+				.enter-wrap-text{color:#90bcb2;}
+				.enter-wrap-icon{border-color: #90bcb2 transparent transparent transparent;transform:rotate(0deg);}
+			}
 		}
 
 		//basked link
