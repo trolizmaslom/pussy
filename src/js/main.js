@@ -8,6 +8,7 @@
 //= partials/plagins/jquery.fancybox.pack.js
 //= partials/plagins/jquery.formstyler.min.js
 //= partials/plagins/jquery.jscrollpane.min.js
+//= partials/plagins/jquery.mousewheel.js
 
 /* /plagins */
 

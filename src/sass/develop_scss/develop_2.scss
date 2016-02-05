@@ -62,16 +62,6 @@
 }
 
 body{background-color: white; min-height: 0 ;}
-.scroll-pane
-{
-    width: 100%;
-    height: 200px;
-    overflow: auto;
-}
-.horizontal-only
-{
-    height: auto;
-    max-height: 200px;
-}
 
+.news-lol-scroll .jspVerticalBar {width: 0px;}
 
