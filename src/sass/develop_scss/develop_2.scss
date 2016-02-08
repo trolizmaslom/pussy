@@ -119,6 +119,19 @@
 
 // /delivery
 
+
+// breadrcrumbs
+.breadrcrumbs{font-family: 'PFDinTextPro'; font-size: 14px; line-height: 18px; padding-top: 95px;
+    a{ padding-right: 14px;margin-right: 8px; text-decoration: none; position: relative;color:#7d7d7d;
+        &:after{content: '/'; right: 0px; position: absolute;}
+    }
+    a:last-child{color: #7abdb3;
+        &:after{content: '';}
+    }
+}
+
+
+
 body{background-color: white; min-height: 0 ;}
 
 .news-lol-scroll .jspVerticalBar {width: 0px;}
