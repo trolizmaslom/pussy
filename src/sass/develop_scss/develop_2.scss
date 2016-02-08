@@ -1,6 +1,10 @@
+// title
 .title-text{ font-family: 'Posterizer'; font-size: 62px; line-height: 72px;}
+// /title
+// -----------------------------------------------------------------------------------------------------------
 
-#last-news{background-image: url(../images/header-background-img-rotate.png); background-repeat: repeat-x; background-position: right -1px; margin-top: -37px; padding-top: 80px;
+// last news
+#last-news{background-image: url(../images/header-background-img-rotate.png); background-repeat: repeat-x; background-position: right -1px; margin-top: -37px; padding-top: 80px;position: relative;
     .wrap-last{background-image: url(../images/bg-l1-cat.png); background-size: 1920px 485px; background-position: right bottom; background-repeat: no-repeat; padding-bottom: 195px;    padding-top: 41px;
         .convert-last{color: #e5a165;background-image: url(../images/bg-l2-cat.jpg); background-size: 367px 419px; background-position: left bottom; background-repeat: no-repeat;}
     }
@@ -18,6 +22,11 @@
         .button-v-konce{position: absolute; right: 0; bottom: 0; width: 215px; }
     }
 }
+
+// /last news
+// -----------------------------------------------------------------------------------------------------------
+
+// popular items
 
 #popular-item{background-image: url(../images/news-bg.jpg); background-attachment: fixed;background-position: center;
     .popular-wrap{background-image: url(../images/header-background-img.png); background-repeat: repeat-x;background-position: right -3px; padding-top: 103px; padding-bottom: 155px; color: white;}
@@ -38,8 +47,12 @@
         .button-v-konce{width: 215px; position: absolute; bottom: 0; right: 0; }
     }
 }
+// /popular items
+// -----------------------------------------------------------------------------------------------------------
 
-#one-news, .best-bg-wrap{
+// news and news-on block are the same styles
+
+.best-bg-wrap{
     .wrap-one-news{background-image: url(../images/bg-l1-cat.png); background-size: 1920px 485px; background-position: right bottom; background-repeat: no-repeat; padding-bottom: 195px;    padding-top: 120px;
         .construct-impl{color: #e5a165;background-image: url(../images/bg-l2-cat.jpg); background-size: 367px 419px; background-position: left bottom; background-repeat: no-repeat;}
     }
@@ -68,6 +81,55 @@
         .button-v-konce{position: absolute; right: 17px; bottom: 25px; width: 213px;}
     }
 }
+
+// /news and news-on block are the same styles
+
+// -----------------------------------------------------------------------------------------------------------
+
+// delivery
+.delivery-wrap{ background-image: url(../images/delivery-bg.jpg); background-attachment: fixed; background-position: center center; color: white;padding-bottom: 195px;    padding-top: 102px;
+    .convert-delivery{
+        .after-content{
+            .row{width: 100%; padding: 20px 0 10px; margin-bottom: 26px;
+                .title-row{width: 100%; text-transform: uppercase; color: white; padding-bottom: 7px; margin-bottom: 30px; position: relative; letter-spacing: 2px;
+                    &:after{content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+                    background: -o-linear-gradient(left, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+                    background: linear-gradient(to right, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); }
+                }
+                .content-element{ width: 100%;
+                    .element-img{width: 120px; float: left; }
+                    .after-block{ margin-left: 130px; font-family: 'PFDinTextPro'; font-size: 14px; line-height: 18px;color:#ffcc5f;
+                        h5{font-weight: 700;  text-transform: uppercase; padding-bottom: 5px; }
+                        p{font-weight: 400; color: white;}
+                    }
+                    .colorized-ff{color: #00e3c8;}
+                    .colorized-fs{color: #bed9c5;}
+                    .colorized-ft{color: #6be1dd;}
+
+                    .colorized-sf{color: #eec37d;}
+                    .colorized-ss{color: #80e8d7;}
+                }
+                .sliced-row{width: 30%; float: left; margin: 0 calc(10%/6);}
+            }
+        }
+    }
+}
+
+// /delivery
+
+
+// breadrcrumbs
+.breadrcrumbs{font-family: 'PFDinTextPro'; font-size: 14px; line-height: 18px; padding-top: 95px;
+    a{ padding-right: 14px;margin-right: 8px; text-decoration: none; position: relative;color:#7d7d7d;
+        &:after{content: '/'; right: 0px; position: absolute;}
+    }
+    a:last-child{color: #7abdb3;
+        &:after{content: '';}
+    }
+}
+
 
 
 body{background-color: white; min-height: 0 ;}

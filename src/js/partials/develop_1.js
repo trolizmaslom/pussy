@@ -55,7 +55,6 @@ function headerMenuSendwich(){
         var container = $('.header-navigate-wrap');
 
         if(container.has(e.target).length == 0 || $(e.target).parents('.sendwich-icon-wrap').is('.active')){
-            console.log($(e.target));
             $('.sendwich-icon-wrap').removeClass('active');
         }
         else if($(e.target).parents('.sendwich-icon-wrap').length != 0 && !$(e.target).parents('.sendwich-icon-wrap').is('.active')){
