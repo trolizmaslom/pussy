@@ -117,3 +117,37 @@ $border:#c48e58;
         }
     }
 /*END 404*/
+/*contacts*/
+    .contacts{ position: relative;background-color: transparent;
+        .section-bg{background-color: transparent; margin-top: -40px;}
+        .contacts-wrapp{ position: absolute; top:0; width:100%;
+            .left-sect{float:left; width:50%;
+                .title-text{color:#e5a165;}
+                .form-wrap{width:100%;
+                    .item-d{width:100%; border-bottom: 1px solid $border;
+                        .titl{text-align: left; width:75px; display: inline-block; font: 700 18px/18px 'PFDinTextPro'; color:#bd864c;}
+                        .desc{float:right;text-align: right;display: inline-block; font: 400 18px/18px 'PFDinTextPro'; color:#747474;  }
+                    }
+                    .quest{font: 700 18px/18px 'PFDinTextPro'; color:#d39f68;}
+                    .contacts-form{
+                        &.form {
+                            .half{max-width: 49%; display: inline-block; vertical-align: top; width:100%;
+                                &.right{float:right;}
+                            }
+                            textarea{height: 102px; border:1px solid #d4a16c; resize:none; width:100%; border-radius: 5px; padding: 0 7px;}
+                            .buttons_form_wrap{text-align: right;}
+                        }
+                    }
+                }
+            }
+            .right-sect{float:left;width:50%;
+                .border-align{ position: relative;
+                    .border{img{}}
+
+                    #mapInit{height: 415px; width:500px; position: absolute; top:14px; left:43px;}
+
+                }
+            }
+        }
+    }
+/*END contacts*/

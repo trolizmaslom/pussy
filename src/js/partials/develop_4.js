@@ -37,11 +37,28 @@ function paralaxCat(item){
         item.hide();
     }
 }
-
+function itemCard(){
+    if($('.item-card-img-item')){
+        function clickOnItem(){
+            $('.item-card-img-item').click(function(event) {
+                if($(this).is('.active')){
+                    console.log('clikc on actie');
+                    return false;
+                }
+                var img = $(this).find('img').attr('src');
+                $('.item-card-img-item').removeClass('active');
+                $(this).addClass('active');
+                $('.item-card-main-img').find('img').attr('src', img);
+            });
+        }
+        clickOnItem();
+    }
+}
 
 $(document).ready(function(){
     worksHeight($('.grid_item'));
-    paralaxCat($('.parallax-cat'))
+    paralaxCat($('.parallax-cat'));
+    itemCard();
 });
 
 $(window).load(function(){
