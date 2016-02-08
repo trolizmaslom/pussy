@@ -1,0 +1,19 @@
+/*katalog*/
+    @media screen and (max-width: 666px){
+        .catalog{     padding-top: 20px;
+            .cat-wrap{
+                .cat-content{
+                    aside{ max-width: 100%;     padding-bottom: 20px;
+                        .cat-sale{display: none;}
+                        .cat-menu{margin: 0 auto;}
+                    }
+                    .items-wrapp{width: 100%;
+                        .item{ margin: 0 auto 5px; display: block;}
+                        .otbivka{width:100%; left: 0;}
+                    }
+                }
+            }
+        }
+        .popular-items .pop-wrap .pop-content .item{max-width: 49%;}
+    }
+/*END katalog*/
