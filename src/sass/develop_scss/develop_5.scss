@@ -4,8 +4,8 @@ $border:#c48e58;
         .popular-items{
             .pop-wrap{padding-bottom: 86px;
                 .title-text{    padding-bottom: 40px; h2{color:#d39f68;}}
-                .pop-content{display: flex; justify-content: space-around; flex-wrap: wrap;
-                    .item{  width:100%; max-width: 288px; height: 137px; display: block; position: relative; overflow: hidden; vertical-align: top; margin-bottom: 10px;
+                .pop-content{
+                    .item{  width:100%; max-width: 24%; height: 137px; display:inline-block; position: relative; overflow: hidden; vertical-align: top; margin-bottom: 10px;
                         .imgs{position: relative; overflow: hidden; width:100%; max-width: 288px; height: 137px;border:3px solid $border; border-radius: 7px;     transform: translateZ(-1px);
                             img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px) scale(1.1) rotate(0); transition: transform 500ms; }
                             .bgc{background-color: rgba(0,0,0, 0.5);  position: absolute; top:0;  width:100%; height:100%;  transition: background-color 500ms;}
@@ -68,7 +68,7 @@ $border:#c48e58;
                         }
                         #scroll-pane{height: 881px; overflow: auto; width: 100%; }
                         .jspVerticalBar{display: none;}
-                       .pane-three{display: flex; justify-content: space-around; flex-wrap: wrap; }
+                       .pane-three{ }
                         .item{ height: 353px; max-width: 284px; width: 100%; overflow: hidden; position: relative; display: inline-block; margin-bottom: 5px;
                             &.big{max-width: 580px;
                                 .imgs{.img-wrap{max-width: 580px;}}
@@ -105,4 +105,3 @@ $border:#c48e58;
         }
     /*END catalog*/
 /*END katalog*/
-body{background-color: #fff;}
