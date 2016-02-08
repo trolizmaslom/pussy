@@ -16,6 +16,8 @@
 
 }
 @media screen and (max-width: 992px){
+    .delivery-wrap .convert-delivery .after-content .row .sliced-row{width: 100%; float: none;    padding: 10px 0;}
+
     .conteiner-inside .news-lol-scroll {
         h3 i { display: block; position: static;}
         h3 span{display: block; width: 100%;}
@@ -48,6 +50,11 @@
 
 }
 @media screen and (max-width: 666px){
+    .delivery-wrap { padding-bottom: 40px;}
+    .delivery-wrap .convert-delivery .after-content .row .content-element {
+        .after-block { margin-left: 0px;}
+        .element-img {margin: 0 10px 10px 0;}
+    }
 
     #popular-item .popular-wrap { padding-top: 50px; padding-bottom: 80px;}
 
