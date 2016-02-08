@@ -52,3 +52,60 @@
         }
     }
 /*END 404*/
+/*contacts*/
+    @media screen and (max-width: 1200px){
+       .contacts{
+            .contacts-wrapp{
+                .left-sect{padding:0; width: 43%;
+                    .title-text{    font-size: 40px;}
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1024px){
+       .contacts{ height: 1350px; background-color: #F8F4F3;
+            .contacts-wrapp{ background-color: #F8F4F3;
+                .left-sect{padding:0; width: 100%; float: none;
+                    .title-text{    font-size: 40px;}
+                }
+                .right-sect{width:100%; float: none;
+                    .border-align{ position: relative; padding-left: calc((100% - 615px)/2);}
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 666px){
+       .contacts{
+            .contacts-wrapp{
+                .right-sect{width:100%; float: none;
+                    .border-align{ position: relative; padding-left:0;
+                        .border{  position: relative;
+                            .ramka{display: none;}
+                        }
+                        #mapInit{width:100%; position: relative; top:0; left:0;}
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px){
+       .contacts{     height: 1176px;
+            .contacts-wrapp{padding-top: 30px;
+                .left-sect{
+                    .title-text{line-height: 40px;}
+                    .form-wrap{
+                        .item-d{
+                            .titl{ font: 700 16px/16px 'PFDinTextPro'; }
+                            .desc{ font: 400 16px/16px 'PFDinTextPro';   }
+                        }
+                        .contacts-form{
+                            &.form {
+                                .half{max-width: 100%; margin-bottom: 10px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+/*END contacts*/
