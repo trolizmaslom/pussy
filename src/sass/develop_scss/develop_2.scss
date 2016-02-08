@@ -137,12 +137,13 @@
 
 // personal cabinet
 
-.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.jpg); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px;
+.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.jpg); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px; margin-bottom: 200px;
     .convert{
         .forming-block{padding-top: 37px;
             .row-sample{ border-bottom: 1px solid #cf8746; width: 100%; max-width: 520px; font-family: 'PFDinTextPro'; font-size: 14px; line-height: 26px; margin-bottom: 24px;
                 .naming{float: left; font-weight: 700; color:#cf8746; text-transform: uppercase; padding-left: 8px; }
                 .context{ float: right;font-size: 18px; color: #747474; display: table; min-height: 26px; vertical-align: middle;
+                    form{float: left;}
                     span{font-weight: 700;}
                     .hide-pass{border: none; outline:  none; text-align: right; padding-right: 10px; display: table-cell; font-family: 'PFDinTextPro'; font-size: 14px; letter-spacing: 3px; font-size: 18px;color: #747474; min-height: 26px;}
                     .img-hovered-click{float: right; cursor: pointer; display: table-cell;
@@ -165,7 +166,7 @@
 }
 
 
-body{background-color: white !important; min-height: 0 ;}
+body{background-color: white !important; min-height: 0 ; height: 100vh;}
 
 .news-lol-scroll .jspVerticalBar {width: 0px;}
 
