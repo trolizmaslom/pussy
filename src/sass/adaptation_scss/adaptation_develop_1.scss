@@ -32,7 +32,7 @@
 
 }
 @media screen and (max-width: 1280px){
-	
+
 	/* header */
 
 		.header{
@@ -113,6 +113,7 @@
 		.header{
 			.header-logo-mobile{position: relative;text-align: center;}
 			.header-links-wrap{padding-top: 20px;padding-left: 0;}
+
 			.header-navigate-wrap{min-height: 50px;
 				.sendwich-icon-wrap{top: auto;bottom: 10px;}
 				.header-navigate-main{padding-top: 55px;
@@ -130,12 +131,31 @@
 					}
 				}
 			}
+
+			.header-form-wrap{right: -60px;
+				&:before{border-radius: 25px;}
+				.header-form{border-radius: 25px;
+					&:before{border-color:transparent transparent #fff transparent;right: 75px;border-width: 17px 13px;}
+				}
+			}
 		}
 
 	/* /header */
 
 }
 @media screen and (max-width: 479px){
+
+	/* header */
+
+		.header{
+			.header-form-wrap{right:-110px;width: auto;
+				.header-form{
+					&:before{right: 130px;}
+				}
+			}
+		}
+
+	/* /header */
 
 }
 @media screen and (max-width: 320px){

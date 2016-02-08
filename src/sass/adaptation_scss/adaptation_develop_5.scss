@@ -17,3 +17,38 @@
         .popular-items .pop-wrap .pop-content .item{max-width: 49%;}
     }
 /*END katalog*/
+/*404*/
+    @media screen and (max-width: 900px){
+        .page404{
+            .page404-wrap{
+                .text{
+                    p{ font:400 24px/24px 'Neris';
+                        &:nth-child(1){ font:400 48px/48px 'NeoSans';}
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 666px){
+        .page404{
+            .page404-wrap{
+                .text{     padding-top: 47px;
+                    p{ font:400 16px/16px 'Neris';
+                        &:nth-child(1){ font:400 30px/30px 'NeoSans';}
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px){
+        .page404{
+            .page404-wrap{
+                .text{     padding-top: 47px;
+                    p{ font:400 12px/12px 'Neris';
+                        &:nth-child(1){ font:400 22px/22px 'NeoSans';}
+                    }
+                }
+            }
+        }
+    }
+/*END 404*/
