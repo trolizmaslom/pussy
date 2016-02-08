@@ -105,3 +105,15 @@ $border:#c48e58;
         }
     /*END catalog*/
 /*END katalog*/
+/*404*/
+    .page404{
+        .page404-wrap{position: relative;
+            .bg{position: relative; z-index: 0;}
+            .text{width: 100%; text-align: center; padding-top: 125px;  position: absolute; z-index: 1000; top: 0;
+                p{color: #fff; font:400 30px/30px 'Neris';
+                    &:nth-child(1){text-transform: uppercase; font:400 72px/72px 'NeoSans';}
+                }
+            }
+        }
+    }
+/*END 404*/
