@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $('#scroll-pane').jScrollPane({showArrows: false, autoReinitialise:true,verticalDragMaxHeight:10, contentWidth: '0px', verticalDragMaxHeight:20});
+    if($('.contacts').length>0){
      googleMap('mapInit');
+    };
 });
 
 $(window).load(function(){
