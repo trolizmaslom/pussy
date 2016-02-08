@@ -5,11 +5,28 @@
 	/* header */
 
 		.header{
+
+			// header-top (basic)
+
 			.header-menu{
 				li{
 					&.second-level{
 						&:hover{
 							.second-level-icon{transform:rotate(90deg);}
+						}
+					}
+				}
+			}
+
+			// header-bottom
+
+			&.header-reverse{
+				.header-menu{
+					li{
+						&.second-level{
+							&:hover{
+								.second-level-icon{transform:rotate(-90deg);}
+							}
 						}
 					}
 				}
