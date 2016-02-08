@@ -19,7 +19,7 @@
 
 		//header-top (basic)
 
-		&:after{content: '';display: block;position: absolute;left: 0;right: 0;top: 100%;height: 0px;background-image:url(../images/header-background-img.png);height: 39px;background-repeat: repeat-x;}
+		&:after{content: '';display: block;position: absolute;left: 0;right: 0;top: 100%;height: 0px;background-image:url(../images/header-background-img-main.png);height: 52px;background-repeat: repeat-x;}
 		.mobile-field{display: none;position: absolute;left: 0;top: 0;right: 0;bottom: 0;background-color: #fff;z-index: 1;}
 		.mbox{padding: 0;}
 		.header-logo-mobile{display: none;position: absolute;top: 0;left:50%;transform:translate(-50%, 0);z-index: 1;}
