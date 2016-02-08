@@ -39,6 +39,9 @@
     .items-wrap .item-inside { float: none; width: 80%; height: auto !important; margin: 20px auto;}
 }
 @media screen and (max-width: 767px){
+
+    .breadrcrumbs{display: none;}
+
     .conteiner-inside .content-more{margin: 0 auto; max-width: 80%;
         img {float: none; display: block; max-width: 100%; width: 100%;}
         h3 { padding-top: 10px;    width: 100%;}

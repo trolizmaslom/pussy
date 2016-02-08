@@ -172,6 +172,7 @@ $(document).ready(function(){
    Maskedinput();
    fancyboxForm();
 
-   validate('.header-form-main');
+   validate('.header-form-top');
+   validate('.header-form-bottom');
 
 });
