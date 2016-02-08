@@ -118,7 +118,8 @@ $border:#c48e58;
     }
 /*END 404*/
 /*contacts*/
-    .contacts{ position: relative;
+    .contacts{ position: relative;background-color: transparent;
+        .section-bg{background-color: transparent; margin-top: -40px;}
         .contacts-wrapp{ position: absolute; top:0; width:100%;
             .left-sect{float:left; width:50%;
                 .title-text{color:#e5a165;}
