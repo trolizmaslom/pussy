@@ -60,7 +60,29 @@
 /*/top-block*/
 
 
-
+/*delivery*/
+.delivery{background: url('../images/delivary-bg.jpg') center center no-repeat;background-attachment: fixed;background-size: cover;margin-top: -40px;min-height: 845px;
+    .title-text{color: white;padding-top:129px;padding-bottom: 42px;}
+    .delivery-items{text-align: center;}
+    .delivery-item{width: 32%;text-align: center;display: inline-block;vertical-align: top;margin-bottom: 45px;
+        &.item-2{
+            .delivery-item-text{bottom: -13px;left: 55%;}
+        }
+        &.item-3{
+            .delivery-item-text{bottom: -13px;left: 46%;}
+        }
+        &.item-5{
+            .delivery-item-text{bottom: -8px;left: 53%;}
+        }
+        &.item-6{
+            .delivery-item-text{bottom: 4px;left: 36%;}
+        }
+    }
+    .delivery-item-wrap{display: inline-block;position: relative;vertical-align: top;}
+    .delivery-item-img{min-height: 184px;}
+    .delivery-item-text{position: absolute;bottom:-7px;width: 132px;left: 44%;color: white;font-size: 14px;font-weight: 400;text-transform: uppercase;}
+}
+/*/delivery*/
 
 
 
