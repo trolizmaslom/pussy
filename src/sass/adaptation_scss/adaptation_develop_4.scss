@@ -62,6 +62,18 @@
         }
         .title-text{}
     }
+
+
+    /*delivery*/
+    .delivery{margin-top: -39px; min-height: 720px;background-position-x: 43%;
+        .title-text{text-align: center;padding-top: 100px;}
+        .delivery-item{
+            &.item-5{
+                .delivery-item-text{bottom: 13px;left: 53%;}
+            }
+        }
+    }
+    /*/delivery*/
 }
 @media screen and (max-width: 767px){
 
@@ -77,7 +89,7 @@
     /*top-block*/
     .top-block{min-height: 700px;background-size: cover;background-position: 20% center;
         .top-block-text{text-align: center;padding-right: 0;padding-top: 265px;}
-        .title-text{font-size: 62px; 
+        .title-text{font-size: 62px;
             &:after{display: none;}
         }
         .lapische{}
@@ -86,6 +98,17 @@
         }
     }
     /*/top-block*/
+
+    /*delivery*/
+    .delivery{margin-top: -39px; min-height: 720px;background-position-x: 43%;
+        .title-text{padding-top: 100px;}
+        .delivery-item{width: 50%;display: block;margin:0 auto;margin-bottom: 45px;
+            &.item-5{
+                .delivery-item-text{bottom: 13px;left: 53%;}
+            }
+        }
+    }
+    /*/delivery*/
 }
 @media screen and (max-width: 479px){
     /*like-massonry*/
@@ -130,6 +153,16 @@
         }
     }
     /*/top-block*/
+
+    /*delivery*/
+    .delivery{background-position-x: 43%;
+        .delivery-item{width: 75%;
+            &.item-5{
+                .delivery-item-text{bottom: 13px;left: 53%;}
+            }
+        }
+    }
+    /*/delivery*/
 }
 @media screen and (max-width: 320px){
 
