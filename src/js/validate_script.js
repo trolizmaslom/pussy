@@ -90,6 +90,15 @@ function validate(form, options){
                     }
                 });
             }
+            else{
+                $(this).rules("add", {
+                    minlength:3,
+                    messages:{
+                        minlength:"Недостаточно символов.",
+                        required:"Вы пропустили."
+                    }
+                });
+            }
         })
     }
 }
@@ -157,8 +166,12 @@ function fancyboxForm(){
   })
 }
 
+
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    Maskedinput();
    fancyboxForm();
+
+   validate('.header-form-main');
+
 });

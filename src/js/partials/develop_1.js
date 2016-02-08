@@ -67,20 +67,21 @@ function headerShowForm(){
         var container = $(".enter-wrap");
 
         if(container.has(e.target).length == 0 || $(e.target).parent().is('.enter-wrap-link.active')){
-        	console.log(container.has(e.target).length);
         	$('.enter-wrap-link.active').removeClass('active');
         	$('.enter-wrap.show .header-form-wrap').slideUp(300);
         	$('.enter-wrap.show').removeClass('show');
         }
         else if($(e.target).parent().is('.enter-wrap-link:not(.active)')){
-        	//console.log('s');
+
         	$('.enter-wrap-link.active').removeClass('active');
         	$('.enter-wrap.show .header-form-wrap').slideUp(300);
         	$('.enter-wrap.show').removeClass('show');
         	var parent = $(e.target).parents('.enter-wrap');
-        	parent.addClass('show');
+
         	$(e.target).parent().addClass('active');
-        	$('.enter-wrap.show .header-form-wrap').slideDown(300);
+        	parent.parent().find('.header-form-wrap').slideDown(300, function(){
+                parent.addClass('show');
+            });
         }
 
     });
