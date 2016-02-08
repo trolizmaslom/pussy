@@ -44,13 +44,7 @@ function googleMap(mapWrap){
             optimized: false,
             visible: true,
             flat: true,
-            icon: {
-                scale: 4,
-                fillColor: '#fff',
-                fillOpacity: 1,
-                strokeColor: '#FF3232',
-                strokeWeight: 10
-            },
+
         });
 
         google.maps.event.addListener(marker, 'click', function() {

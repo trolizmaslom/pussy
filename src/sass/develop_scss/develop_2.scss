@@ -119,20 +119,54 @@
 
 // /delivery
 
+// -----------------------------------------------------------------------------------------------------------
 
 // breadrcrumbs
 .breadrcrumbs{font-family: 'PFDinTextPro'; font-size: 14px; line-height: 18px; padding-top: 95px;
     a{ padding-right: 14px;margin-right: 8px; text-decoration: none; position: relative;color:#7d7d7d;
-        &:after{content: '/'; right: 0px; position: absolute;}
+        &:after{content: '/'; right: 0px; position: absolute; transition: all 0.3s;}
+        &:hover{color: #7abdb3;}
     }
     a:last-child{color: #7abdb3;
         &:after{content: '';}
     }
 }
+// /breadrcrumbs
+
+// -----------------------------------------------------------------------------------------------------------
+
+// personal cabinet
+
+.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.jpg); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px; margin-bottom: 200px;
+    .convert{
+        .forming-block{padding-top: 37px;
+            .row-sample{ border-bottom: 1px solid #cf8746; width: 100%; max-width: 520px; font-family: 'PFDinTextPro'; font-size: 14px; line-height: 26px; margin-bottom: 24px;
+                .naming{float: left; font-weight: 700; color:#cf8746; text-transform: uppercase; padding-left: 8px; }
+                .context{ float: right;font-size: 18px; color: #747474; display: table; min-height: 26px; vertical-align: middle;
+                    form{float: left;}
+                    span{font-weight: 700;}
+                    .hide-pass{border: none; outline:  none; text-align: right; padding-right: 10px; display: table-cell; font-family: 'PFDinTextPro'; font-size: 14px; letter-spacing: 3px; font-size: 18px;color: #747474; min-height: 26px;}
+                    .img-hovered-click{float: right; cursor: pointer; display: table-cell;
+                        img{padding-bottom: 4px;padding-right: 6px;}
+                    }
+                }
+            }
+            .fun-move-rich-man{display: inline-block; width: 170px; margin-left: 20px;
+                .button{
+                    span{height: 35px; line-height: 30px;}
+                }
+            }
+            .hipe-block{display: none;}
+            .big-row-convert { margin-top: -8px;
+                .row-sample{display: inline-block;}
+            }
+        }
+    }
+
+}
 
 
-
-body{background-color: white; min-height: 0 ;}
+body{background-color: white !important; min-height: 0 ; height: 100vh;}
 
 .news-lol-scroll .jspVerticalBar {width: 0px;}
 
