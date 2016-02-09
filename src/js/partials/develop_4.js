@@ -126,12 +126,29 @@ function fancyboxItemCard(){
   })
 }
 
+function scrollAnim(){
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('.anim_scroll');
+    sr.reveal('.anim_scroll_left',{
+        rotate:{ x : -50, y :0, z : 0 },
+        duration    : 1000,
+        origin      : 'left',
+    });
+    sr.reveal('.anim_scroll_right',{
+        rotate:{ x : 50, y :0, z : 0 },
+        duration    : 1100,
+        origin      : 'right',
+    });
+}
+
+
 $(document).ready(function(){
     fancyboxItemCard();
     worksHeight($('.grid_item'));
     paralaxCat($('.parallax-cat'));
     itemCard('.show-slider');
     itemCard('.hidden-slider');
+    scrollAnim();
 
 });
 
