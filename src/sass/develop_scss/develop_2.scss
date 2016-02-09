@@ -137,7 +137,7 @@
 
 // personal cabinet
 
-.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.jpg); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px; margin-bottom: 200px; color: #e5a165;
+.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.png); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px; margin-bottom: 200px; color: #e5a165; background-color: #fafdff;
     .convert{
         .forming-block{padding-top: 37px; min-height: 450px;
             .row-sample{ border-bottom: 1px solid #cf8746; width: 100%; max-width: 520px; font-family: 'PFDinTextPro'; font-size: 14px; line-height: 26px; margin-bottom: 24px; transition: all 0.3s;
@@ -189,7 +189,4 @@
 
 // /popup email
 
-body{background-color: white !important; min-height: 0 ; height: 100vh;}
-
-.news-lol-scroll .jspVerticalBar {width: 0px;}
 
