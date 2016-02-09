@@ -238,11 +238,6 @@
 
 	.busked-wrapper-fancybox{width: 100%!important;max-width: 1170px;left:50%!important;transform:translate(-50%, 0);
 		.fancybox-skin{border-radius: 20px;}
-		.fancybox-close{right: 5px;top:5px;width: 40px;height: 40px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
-			 &:before, &:after{content: '';position: absolute;display: block;width: 25px;height: 1px;background-color:#fff;top:50%;left:calc(50% - 12px);}
-			 &:before{transform:rotate(-45deg);}
-			 &:after{transform:rotate(45deg);}
-		}
 		.fancybox-inner{width: 100%!important;}
 		#busked{max-width: 1170px;width: 100%;}
 		.busked{padding: 25px 50px 25px 50px;}
@@ -296,3 +291,15 @@
 	}
 
 /* /busked */
+
+/* fancybox */
+
+	.busked-wrapper-fancybox{
+		.fancybox-close{right: 5px;top:5px;width: 40px;height: 40px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
+			 &:before, &:after{content: '';position: absolute;display: block;width: 25px;height: 1px;background-color:#fff;top:50%;left:calc(50% - 12px);}
+			 &:before{transform:rotate(-45deg);}
+			 &:after{transform:rotate(45deg);}
+		}
+	}
+
+/* /fancybox */
