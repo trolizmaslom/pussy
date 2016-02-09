@@ -4,7 +4,73 @@
 <!-- MAIN -->
 <div class="wrapper-main">
 
-
+    <section id="registration" class="registration">
+        <div class="whiskas"><img src="images/whiskas2.png" alt=""></div>
+        <div class="registration-wrap mbox">
+            <div class="title-text">
+                <h2>Регистрация</h2>
+            </div>
+            <div class="content">
+                <form class="registration-form form" action="ajax.php">
+                    <div class="form_row">
+                        <div class="form_input_wrap">
+                            <div class="form_input_title">Имя</div>
+                            <div class="form_input">
+                                <input type="text" name="name" placeholder="Введите ваше имя" required="required" />
+                            </div>
+                        </div>
+                        <div class="form_input_wrap">
+                            <div class="form_input_title">фамилия</div>
+                            <div class="form_input">
+                                <input type="text" name="surname" placeholder="Введите вашу фамилию" required="required" />
+                            </div>
+                        </div>
+                        <div class="form_input_wrap">
+                            <div class="form_input_title">электронная почта</div>
+                            <div class="form_input">
+                                <input type="email" name="email" placeholder="Введите вашу електронную почту" required="required" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_input_wrap">
+                            <div class="form_input_title">Пароль</div>
+                            <div class="form_input">
+                                <input type="password" id="password" name="password" placeholder="Введите пароль" required="required" aria-required="true" aria-invalid="false">
+                            </div>
+                        </div>
+                        <div class="form_input_wrap">
+                            <div class="form_input_title">Подтверждение пароля</div>
+                            <div class="form_input">
+                                <input type="password" id="re_password"  name="re_password" placeholder="Введите пароль повторно" required="required" aria-required="true" aria-invalid="false">
+                            </div>
+                            <div class="pass-check">
+                                <p>Пароль подтвержден</p>
+                                <p>Пароли не совпадают</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row buttons_form_main">
+                        <div class="buttons_form_wrap">
+                            <button type="submit" class="button">
+                                <span>зарегистрироваться</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="socials">
+                    <div class="title-soc">
+                        <p>Так же вы можете зарегестрироваться через социальные сети :</p>
+                    </div>
+                    <div class="buttons-soc">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>
 <!-- /MAIN -->
