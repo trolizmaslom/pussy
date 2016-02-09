@@ -172,7 +172,7 @@ function validationCallEmail(form){
         $.fancybox.open("#call_success_email",{
             padding:0,
             fitToView:false,
-            wrapCSS:"call-popup",
+            wrapCSS:"call-popup_success",
             autoSize:true,
             'closeBtn': false,
             'helpers': {
@@ -207,7 +207,7 @@ function validationCallPass(form){
         $.fancybox.open("#call_success_pass",{
             padding:0,
             fitToView:false,
-            wrapCSS:"call-popup",
+            wrapCSS:"call-popup_success",
             autoSize:true,
             'closeBtn': false,
             'helpers': {
