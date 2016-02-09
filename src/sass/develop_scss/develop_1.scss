@@ -294,12 +294,15 @@
 
 /* fancybox */
 
-	.busked-wrapper-fancybox{
-		.fancybox-close{right: 5px;top:5px;width: 40px;height: 40px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
-			 &:before, &:after{content: '';position: absolute;display: block;width: 25px;height: 1px;background-color:#fff;top:50%;left:calc(50% - 12px);}
+	/*.busked-wrapper-fancybox{*/
+		.fancybox-close{right: 5px;top:5px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;border:1px solid #dcdcdc;
+			 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;top:48%;left:calc(50% - 11px);}
 			 &:before{transform:rotate(-45deg);}
 			 &:after{transform:rotate(45deg);}
+			 &:hover{background-color: white;border:1px solid #dcdcdc;
+				&:before, &:after{background-color: #dcdcdc;}
+			 }
 		}
-	}
+	/*}*/
 
 /* /fancybox */
