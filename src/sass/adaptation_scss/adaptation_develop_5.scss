@@ -130,3 +130,15 @@
         }
     }
 /*END about-us*/
+/*password-recover*/
+    @media screen and (max-width: 600px){
+        .password-recover{
+            .recover-wrap{padding-top: 45px;     padding-bottom: 169px;
+                .title-text{    line-height: 34px; padding-bottom: 14px; font-size: 40px; padding-left: 0;}
+            }
+        }
+    }
+    @media screen and (max-width: 400px){
+        .password-recover{.recover-wrap{ .title-text{ font-size: 36px; } } }
+    }
+/*END password-recover*/
