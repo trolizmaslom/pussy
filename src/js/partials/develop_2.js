@@ -10,10 +10,11 @@ function punishScrollPane (){
     $('.news-lol-scroll').jScrollPane({showArrows: false, autoReinitialise:true,verticalDragMaxHeight:10, contentWidth: '0px', verticalDragMaxHeight:20});
 }
 
-$(document).ready(function(){
-    punishScrollPane ();
-
+function convertationLook() {
     var flagShtock1 = true;
+    var flagShtock2 = true;
+    var redFlag = true;
+    var yelowFlag = true;
 
     $('.img-hovered-click1').click(function(){
         if (flagShtock1) {
@@ -30,14 +31,11 @@ $(document).ready(function(){
 
     });
 
-    var flagShtock2 = true;
-
     $('.img-hovered-click2').click(function(){
         if (flagShtock2) {
             $(this).closest('.context').find('input').attr('type', 'text');
             $(this).find('img').attr('src' , 'images/in-ie8-not-belive.png' );
             flagShtock2 = false ;
-
         }
         else{
             $(this).closest('.context').find('input').attr('type', 'password');
@@ -47,23 +45,29 @@ $(document).ready(function(){
 
     });
 
-
-    var redFlag = true;
-    var yelowFlag = true;
-
     $('.olways-click-some1').click(function(){
 
         if (redFlag){
             redFlag = false ;
-            $(this).find('span').html('Отмена');
+            setTimeout(function(){
+                $('.olways-click-some1').find('span').html('Отмена');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '24px');
             $(this).find('a').addClass('green-button');
-            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeIn( "slow" ); //.css('display', 'block');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeIn( 300 );
+
+
         }
         else{
             redFlag = true ;
-            $(this).find('span').html('Изменить');
+            setTimeout(function(){
+                $('.olways-click-some1').find('span').html('Изменить');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '48px');
             $(this).find('a').removeClass('green-button');
-            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeOut("slow"); //.css('display', 'block');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeOut(300);
         }
 
     });
@@ -71,23 +75,37 @@ $(document).ready(function(){
     $('.olways-click-some2').click(function(){
         if (yelowFlag){
             yelowFlag = false ;
-            $(this).find('span').html('Отмена');
+            setTimeout(function(){
+                $('.olways-click-some2').find('span').html('Отмена');
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '24px');
             $(this).find('a').addClass('green-button');
-            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeIn( "slow" ); //.css('display', 'block');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeIn(300 );
         }
         else{
             yelowFlag = true ;
-            $(this).find('span').html('Изменить');
+            setTimeout(function(){
+                $('.olways-click-some2').find('span').html('Изменить');
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '48px');
             $(this).find('a').removeClass('green-button');
-            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeOut("slow"); //.css('display', 'block');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).fadeOut(300);
         }
     });
 
     $('.subm-closest-form').click(function(){
         $(this).closest('.hipe-block').find('form').submit();
-    })
+    });
 
+    $('.reset-page').on('click', function(){
+        location.reload();
+    });
+}
 
+$(document).ready(function(){
+
+    punishScrollPane ();
+    convertationLook();
 
 
 });

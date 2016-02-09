@@ -71,7 +71,22 @@ function itemCard(wrapper){
                 draggable:false,
                 arrows: true,
                 slidesToShow: 4,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                      breakpoint: 767,
+                      settings: {
+                        vertical:false,
+                      }
+                    },
+                    {
+                      breakpoint:321,
+                      settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        vertical:false
+                      }
+                    }]
             });
 
             function showHideArrow(){

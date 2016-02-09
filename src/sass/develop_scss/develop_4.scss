@@ -85,7 +85,8 @@
 /*/delivery*/
 
 
-/*item-card*/
+/*item-card --------------------------------------------*/
+
 /*slider*/
 .item-card-column{float: left;max-width: 52px;}
 .item-card-main-img{max-width: 335px;width: 100%;float: right;height: 230px;position: relative;overflow: hidden;border-radius: 3px;border:1px solid #dda56b;background-color: white;z-index: 5;
@@ -104,9 +105,9 @@
 }
 .item-card-img .slick-prev,.item-card-img .slick-next{top: -20px;border-left: 3px solid #dda56b;border-top: 3px solid #dda56b;height: 16px;width: 16px;left: 50%;transform: translate(-50%, 0) rotate(45deg);}
 .item-card-img .slick-next{top: auto;bottom:-17px;transform: translate(-50%, 0) rotate(-135deg);}
+/*/slider*/
 
-
-.item-card{padding-top: 40px;
+.item-card{padding-top: 40px;padding-bottom: 130px;
     .item-card-title{padding-bottom: 40px;color: #4e4e4e;font-size: 30px;}
     .item-card-center{padding-bottom: 75px;}
     .item-card-left{float: left;width: 400px;}
@@ -150,13 +151,14 @@
     .item-card-img-item{height: 111px !important;width: 111px;margin-bottom: 12px;}
     .item-card-pop-top{padding-bottom: 33px;}
     .item-card-pop-title{float: left;width: 61%;font-size: 30px;color: #4e4e4e;padding-right: 20px;line-height: 30px;}
-    .item-card-pop-buy{float: left;width: 39%;background-color: #faf7cc;padding: 5px 0px;border-radius: 10px;overflow: hidden;}
-    .item-card-pop-price{float: left;width: 38%;color: #4e4e4e;font-size: 36px;line-height: 46px;text-align: center;}
-    .item-card-pop-button{float: left;width: 62%;text-align: center;
+    .item-card-pop-buy{float: left;width: 39%;background-color: #faf7cc;padding: 5px 0px;border-radius: 10px;overflow: hidden;max-width: 420px;}
+    .item-card-pop-buy-wrap{display: table;width: 100%;}
+    .item-card-pop-price{width: 38%;color: #4e4e4e;font-size: 36px;line-height: 36px;text-align: center;display: table-cell;vertical-align: middle;padding: 0 5px;}
+    .item-card-pop-button{width: 62%;text-align: center;display: table-cell;vertical-align: middle;
         a{max-width: 210px;}
     }
 }
-/*/item-card*/
+/*/item-card ---------------------------------- */
 
 
 
