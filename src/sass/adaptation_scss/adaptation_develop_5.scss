@@ -109,3 +109,20 @@
         }
     }
 /*END contacts*/
+/*about-us*/
+    @media screen and (max-width: 768px){
+        .about-us{
+            .about-wrapp{     padding-top: 40px;
+                 .about-pane1{
+                    .content-box{padding-bottom: 80px;
+                        p{ }
+                        .imgs{float: none; border: none; width: 100%; margin: 7px 0 ;
+                            img{margin:0 auto; display: block;}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+/*END about-us*/
