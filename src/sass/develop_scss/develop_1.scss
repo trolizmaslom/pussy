@@ -308,9 +308,9 @@
 /* fancybox */
 
 	.fancybox-close{right: 20px;top:20px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
-		 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;top:48%;left:calc(50% - 11px);}
-		 &:before{transform:rotate(-45deg);top:calc(50% - 1px);}
-		 &:after{transform:rotate(45deg);}
+		 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;left:calc(50% - 11px);top:calc(50% - 1px);}
+		 &:before{transform:rotate(-45deg);transform-origin:50% 0;}
+		 &:after{transform:rotate(45deg);transform-origin:50% 100%;}
 		 &:hover{background-color: #d24a43;}
 	}
 
