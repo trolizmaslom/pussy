@@ -142,3 +142,33 @@
         .password-recover{.recover-wrap{ .title-text{ font-size: 36px; } } }
     }
 /*END password-recover*/
+
+/*registration*/
+    @media screen and (max-width: 920px){
+        .registration{
+            .registration-wrap{ padding-bottom: 110px; padding-top: 106px;
+                .content{    padding: 54px 0px 0;}
+                .registration-form{
+                    &.form{ width: 287px; margin: 0 auto;
+                        .form_input_wrap{   margin-right: 0;
+                            .form_input{
+                                input{height: 36px;}
+                            }
+                        }
+                    }
+                }
+                .buttons_form_main{margin-top: 30px;}
+                .buttons_form_wrap{text-align: center;
+                    .button span{height: 50px;}
+                }
+                .socials{text-align: right;}
+
+            }
+        }
+    }
+    @media screen and (max-width: 480px){
+        .registration{
+            .registration-wrap{ padding-bottom: 80px; padding-top: 50px;}
+        }
+    }
+/*END registration*/
