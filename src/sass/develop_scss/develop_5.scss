@@ -191,8 +191,8 @@ $border:#c48e58;
     }
 /*END about-us*/
 /*password-recover*/
-    .password-recover{ position: relative;
-        .whiskas{position: absolute; bottom: 0; left:0;}
+    .password-recover{
+        .whiskas{position: absolute; bottom: 0; left:0; padding-bottom:50px;}
         .recover-wrap{padding-top: 106px;     padding-bottom: 169px;
             .title-text{color: #d39f68; padding-left: 7px;  padding-bottom: 4px;}
             .subtitle{font:500 14px/17px 'PFDinTextPro'; color:#272827; padding-left: 9px;     padding-bottom: 80px; }
@@ -206,8 +206,8 @@ $border:#c48e58;
     }
 /*END password-recover*/
 /*registration*/
-    .registration{position: relative;
-        .whiskas{position: absolute; bottom: 0; left:0;}
+    .registration{
+        .whiskas{position: absolute; bottom: 0; left:0;padding-bottom:50px;}
         .registration-wrap{ padding-bottom: 110px; padding-top: 106px;
             .content{    padding: 54px 100px 0;}
             .title-text{color: #d39f68;}
