@@ -78,6 +78,14 @@ function itemCard(wrapper){
                       settings: {
                         vertical:false,
                       }
+                    },
+                    {
+                      breakpoint:321,
+                      settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        vertical:false
+                      }
                     }]
             });
 
