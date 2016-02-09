@@ -241,6 +241,8 @@ function fancyboxForm(){
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
+   validate('.recover-form', {submitFunction:validationCall});
+   validate('.registration-form', {submitFunction:validationCall});
 
    validate('.email-change', {submitFunction:validationCallEmail});
    validate('.pass-change', {submitFunction:validationCallPass});
