@@ -18,7 +18,6 @@
 
 /* header */
 
-
 	.header{position: relative;background-color:#ffffff;z-index: 2;
 
 		//header-top (basic)
@@ -278,7 +277,7 @@
 
 		.busked-buttons{
 			.busked-buttons-left, .busked-buttons-right{display: inline-block;width: 50%;vertical-align: bottom;}
-			.busked-buttons-left{top:-20px;position: relative;}
+			.busked-buttons-left{top:-15px;position: relative;}
 			.busked-buttons-right{margin-left: -4px;text-align: right;}
 			.busked-buttons-right-wrap{display: inline-block;max-width: 385px;width: 100%;padding: 15px 20px 20px 20px;border-radius:0 0 15px 15px;background-color: rgba(230, 215, 2, .2);}
 			.busked-sum-text{display: inline-block;font-size: 30px;color:#4e4e4e;}
@@ -294,15 +293,13 @@
 
 /* fancybox */
 
-	/*.busked-wrapper-fancybox{*/
-		.fancybox-close{right: 20px;top:20px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
-			 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;top:48%;left:calc(50% - 11px);}
-			 &:before{transform:rotate(-45deg);top:calc(50% - 3px);}
-			 &:after{transform:rotate(45deg);}
-			 &:hover{background-color: #d24a43;
-				&:before, &:after{background-color: #dcdcdc;}
-			 }
-		}
-	/*}*/
+	.fancybox-close{right: 20px;top:20px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
+		 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;top:48%;left:calc(50% - 11px);}
+		 &:before{transform:rotate(-45deg);top:calc(50% - 3px);}
+		 &:after{transform:rotate(45deg);}
+		 &:hover{background-color: #d24a43;
+			&:before, &:after{background-color: #dcdcdc;}
+		 }
+	}
 
 /* /fancybox */
