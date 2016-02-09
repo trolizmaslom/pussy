@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $('#scroll-pane').jScrollPane({showArrows: false, autoReinitialise:true,verticalDragMaxHeight:10, contentWidth: '0px', verticalDragMaxHeight:20});
+    $('#scroll-pane').jScrollPane({showArrows: false, autoReinitialise:true,verticalDragMaxHeight:10, contentWidth:'0px', verticalDragMaxHeight:20});
+
+    aboutScroll();
     if($('.contacts').length>0){
      googleMap('mapInit');
     };
@@ -10,9 +12,14 @@ $(window).load(function(){
 });
 
 $(window).resize(function(){
-
+    aboutScroll();
 });
+function aboutScroll(){
 
+    if($(window).window<=768){param=$(window).height()+280;}else{ var param = $(window).height()-280;}
+    $('.about-pane2').height(param);
+    $('#about-pane').jScrollPane({showArrows: false, autoReinitialise:true,verticalDragMaxHeight:10, contentWidth: '0px', verticalDragMaxHeight:20});
+}
 function googleMap(mapWrap){
     function initialize() {
         var myLatlng = new google.maps.LatLng(cordX,cordY);

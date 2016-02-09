@@ -162,3 +162,23 @@ $border:#c48e58;
         }
     }
 /*END contacts*/
+/*about-us*/
+    .about-us{ position: relative;
+        .whiskas{position: absolute; bottom: 0; right:0;}
+        .about-wrapp{     padding-top: 106px;
+            .about-pane1{
+                .about-pane2{height: 481px; overflow: auto; width: 100%; }
+                .jspVerticalBar{display: none;}
+                .about-pane3{}
+                .title-text{color: #d39f68;      padding-left: 15px;  padding-bottom: 12px;}
+                .content-box{padding-bottom: 80px;
+                    p{font:400 18px/21px 'PFDinTextPro'; color:#272827; }
+                    .left{float:left; margin: 7px 25px 7px 0;}
+                    .right{float:right; margin: 7px 0 7px 25px;}
+                    .imgs{border: 1px solid $border; border-radius: 5px; overflow: hidden; position: relative;}
+
+                }
+            }
+        }
+    }
+/*END about-us*/
