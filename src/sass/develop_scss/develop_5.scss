@@ -182,3 +182,18 @@ $border:#c48e58;
         }
     }
 /*END about-us*/
+/*password-recover*/
+    .password-recover{ position: relative;
+        .whiskas{position: absolute; bottom: 0; left:0;}
+        .recover-wrap{padding-top: 106px;     padding-bottom: 169px;
+            .title-text{color: #d39f68; padding-left: 7px;  padding-bottom: 4px;}
+            .subtitle{font:500 14px/17px 'PFDinTextPro'; color:#272827; padding-left: 9px;     padding-bottom: 80px; }
+            .recover-form{width:287px; margin: 0 auto;
+                .buttons_form_wrap{text-align: center; padding-top: 41px;
+                    .button span{height: 51px;}
+                }
+                .form_input_wrap{padding-bottom: 21px;}
+            }
+        }
+    }
+/*END password-recover*/
