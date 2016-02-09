@@ -128,7 +128,10 @@ function cutText(){
 /* DOCUMENT READY  */
 $(document).ready(function() {
     //oneHeightItems();
-    $('.footer_placeholder').height($('.footer').outerHeight());
+
+    $('.footer-placeholder').height($('.footer').outerHeight());
+
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
 
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
@@ -144,10 +147,19 @@ $(window).resize(function() {
         oneHeightItemsMain2();
     };
 
-    $('.footer_placeholder').height($('.footer').outerHeight());
+    $('.footer-placeholder').height($('.footer').outerHeight());
+
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
+
+
 });
 $(window).load(function(){
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
     };
+
+    $('.footer-placeholder').height($('.footer').outerHeight());
+
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
+
 });

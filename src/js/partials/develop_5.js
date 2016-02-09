@@ -14,6 +14,7 @@ $(window).load(function(){
 $(window).resize(function(){
     aboutScroll();
 });
+
 function aboutScroll(){
 
     if($(window).window<=768){param=$(window).height()+280;}else{ var param = $(window).height()-280;}

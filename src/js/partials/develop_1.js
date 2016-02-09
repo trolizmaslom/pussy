@@ -102,6 +102,116 @@ function headerShowForm(){
 
 };
 
+//busked func
+function buskedFunc(){
+
+    //busked timer var for buskedItemSum
+    var timer = null;
+
+    //busked item sum
+    function buskedItemSum(item){
+
+        var itemSum = parseInt(item.find('.busked-description-price').data('price'))*parseInt(item.find('.count-input input').val());
+        item.find('.busked-description-value-text').text(itemSum);
+
+    }
+
+    //busked all sum
+    function buskedAllSum(){
+
+        var sum = 0;
+
+        $('.busked-item').each(function() {
+           sum+=parseInt($(this).find('.busked-description-value-text').text());
+        });
+
+        $('.busked-sum-value-numb').text(sum);
+        $('.hidden-busked-sum').val(sum);
+
+    }
+
+    //busked sum by load
+    function buskedSumByLoad(){
+
+        var itemsLength = $('.busked-item').length;
+        var point = 1;
+
+        $('.busked-item').each(function(){
+            buskedItemSum($(this));
+            if(point>=itemsLength){
+                buskedAllSum();
+            }
+            point++;
+        });
+    }
+
+    //busked item count change
+    function buskedCountChange(){
+
+        $('.busked-description-count .count-button').click(function(){
+            var parent = $(this).parent();
+            var parentItem = $(this).parents('.busked-item');
+            var inputValue = parseInt(parent.find('.count-input input').val());
+
+            if(!$(this).is('.disable')){
+                if($(this).is('.count-minus')){
+                    inputValue--;
+                    if(inputValue == 0){
+                        $(this).addClass('disable');
+                    }
+                }
+                else if($(this).is('.count-plus')){
+                    inputValue++;
+                    if(inputValue>0){
+                        parent.find('.count-minus').removeClass('disable');
+                    }
+                }
+
+                parent.find('input').val(inputValue);
+
+                buskedItemSum(parentItem);
+                buskedAllSum();
+
+            }
+        });
+
+        var pattern = /^[0-9]\d*$/;
+        var lastValue = 0;
+
+        $('.count-input input').keydown(function(){
+            if(pattern.test($(this).val())){
+                lastValue = $(this).val();
+            }
+
+        });
+
+        $('.count-input input').keyup(function(){
+
+            var parent = $(this).parents('.busked-item');
+            var thisValue = $(this).val();
+
+            if(!pattern.test(thisValue)){
+                $(this).val(lastValue);
+            }
+            else{
+                if(parseInt($(this).val())>0){
+                    $(this).parents('.busked-description-count').find('.count-minus').removeClass('disable');
+                }
+                else{
+                    $(this).parents('.busked-description-count').find('.count-minus').addClass('disable');
+                }
+                buskedItemSum(parent);
+                buskedAllSum();
+            }
+
+        });
+
+    };
+
+    buskedCountChange();
+    buskedSumByLoad();
+
+}
 
 $(document).ready(function(){
 
@@ -112,6 +222,8 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
+
+    buskedFunc();
 
 });
 
