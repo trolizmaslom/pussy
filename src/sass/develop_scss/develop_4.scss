@@ -137,11 +137,24 @@
         p{margin-bottom: 20px;}
     }
 
-    .item-card-hidden{position: absolute;left: -99999em;top: -99999em;}
-
-
-
-
+   .item-card-hidden{position: absolute;left: -99999em;top: -99999em;}
+}
+/*popup*/
+.item-card-fancy{
+    .fancybox-skin{background-color: white;box-shadow: none;}
+}
+#item-card-pop{width: 1170px;padding: 50px;
+    .hidden-slider{width: 100%;max-width: 630px;margin:0 auto;}
+    .item-card-main-img{float: left;max-width: 500px;height: 500px;}
+    .item-card-column{float: right;max-width: 111px;}
+    .item-card-img-item{height: 111px !important;width: 111px;margin-bottom: 12px;}
+    .item-card-pop-top{padding-bottom: 33px;}
+    .item-card-pop-title{float: left;width: 61%;font-size: 30px;color: #4e4e4e;padding-right: 20px;line-height: 30px;}
+    .item-card-pop-buy{float: left;width: 39%;background-color: #faf7cc;padding: 5px 0px;border-radius: 10px;overflow: hidden;}
+    .item-card-pop-price{float: left;width: 38%;color: #4e4e4e;font-size: 36px;line-height: 46px;text-align: center;}
+    .item-card-pop-button{float: left;width: 62%;text-align: center;
+        a{max-width: 210px;}
+    }
 }
 /*/item-card*/
 

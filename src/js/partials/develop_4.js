@@ -37,17 +37,18 @@ function paralaxCat(item){
         item.hide();
     }
 }
-function itemCard(){
+function itemCard(wrapper){
+    var $wrap = $(wrapper);
     if($('.item-card-img-item')){
         function clickOnItem(){
-            $('.item-card-img-item').click(function(event) {
+            $wrap.find('.item-card-img-item').click(function(event) {
                 if($(this).is('.slick-current')){
                     return false;
                 }
                 var img = $(this).find('img').attr('src');
-                $('.item-card-img-item').removeClass('slick-current');
+                $wrap.find('.item-card-img-item').removeClass('slick-current');
                 $(this).addClass('slick-current');
-                $('.item-card-main-img').find('img').fadeOut('300', function() {
+                $wrap.find('.item-card-main-img').find('img').fadeOut('300', function() {
                     $(this).attr('src', img).fadeIn(500);
                 });
             });
@@ -55,13 +56,13 @@ function itemCard(){
         clickOnItem();
 
         //start slider
-        if($('.item-card-img-item').length>4){
+        if($wrap.find('.item-card-img-item').length>4){
 
-            $('.item-card-column').on('init beforeChange', function(){
+            $wrap.find('.item-card-column').on('init beforeChange', function(){
               showHideArrow();
             });
 
-            $('.item-card-column').slick({
+            $wrap.find('.item-card-column').slick({
                 infinite: false,
                 focusOnSelect:true,
                 prevArrow:'<button type="button" class="slick-prev"></button>',
@@ -74,28 +75,25 @@ function itemCard(){
             });
 
             function showHideArrow(){
-                var lastItem = $('.item-card-img-item').last().is('.slick-current');
-                var firstItem = $('.item-card-img-item').first().is('.slick-current');
+                var lastItem = $wrap.find('.item-card-img-item').last().is('.slick-current');
+                var firstItem = $wrap.find('.item-card-img-item').first().is('.slick-current');
                 if(firstItem){
-                    $('.item-card .slick-prev').hide();
+                    $wrap.find('.slick-prev').hide();
                 }else{
-                    $('.item-card .slick-prev').show();
+                    $wrap.find('.slick-prev').show();
                 }
                 if(lastItem){
-                    $('.item-card .slick-next').hide();
+                    $wrap.find('.slick-next').hide();
                 }else{
-                    $('.item-card .slick-next').show();
+                    $wrap.find('.slick-next').show();
                 }
             }
-
-            //fix to slider
-            $('.item-card-left .slick-arrow').click(function(event) {
+            $(document).on('click', wrapper, function() {
                 showHideArrow();
-                var img = $('.item-card-img-item.slick-current').find('img').attr('src');
-                    $('.item-card-main-img').find('img').fadeOut('300', function() {
-                        $(this).attr('src', img).fadeIn(500);
-                    });
-
+                var imgs =$wrap.find('.item-card-img-item.slick-current').find('img').attr('src');
+                $wrap.find('.item-card-main-img').find('img').fadeOut('300', function() {
+                    $(this).attr('src', imgs).fadeIn(500);
+                });
             });
         }
     }
@@ -114,10 +112,12 @@ function fancyboxItemCard(){
 }
 
 $(document).ready(function(){
+    fancyboxItemCard();
     worksHeight($('.grid_item'));
     paralaxCat($('.parallax-cat'));
-    itemCard();
-    fancyboxItemCard();
+    itemCard('.show-slider');
+    itemCard('.hidden-slider');
+
 });
 
 $(window).load(function(){
