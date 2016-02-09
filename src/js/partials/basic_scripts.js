@@ -131,7 +131,11 @@ $(document).ready(function() {
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
+
+    console.log($(window).height());
+    console.log($('.footer').outerHeight());
+    console.log($('.header').outerHeight());
 
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
@@ -149,7 +153,7 @@ $(window).resize(function() {
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
 
 
 });
@@ -160,6 +164,6 @@ $(window).load(function(){
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight()+$('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
 
 });
