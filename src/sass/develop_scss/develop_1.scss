@@ -234,15 +234,29 @@
 
 /* busked */
 
-	.busked-wrapper-fancybox{width: 100%!important;max-width: 1170px;left:50%!important;transform:translate(-50%, 0);
+	.busked-wrapper-fancybox{width: 100%!important;max-width: 1170px;min-width:320px;left:50%!important;transform:translate(-50%, 0);
 		.fancybox-skin{border-radius: 20px;}
 		.fancybox-inner{width: 100%!important;}
 		#busked{max-width: 1170px;width: 100%;}
 		.busked{padding: 25px 50px 25px 50px;}
 		.busked-title{font-size: 30px;font-weight: 500;color:#4e4e4e;margin-bottom: 5px;}
 		.busked-items-wrap{border-bottom: 1px solid #eaeaea;}
-		.busked-item{position: relative;padding: 25px 40px 25px 75px;}
-		.busked-close{position: absolute;cursor: pointer;}
+		.busked-item{position: relative;padding: 25px 40px 25px 75px;border-radius: 20px 20px 20px 20px;transition:background-color 300ms ease, box-shadow 300ms ease;
+			&:last-child{border-radius: 20px 20px 0 0;}
+			&:hover{background-color: #f7f7f7;box-shadow:inset 1px 1px 16px 2px rgba(55, 23, 6, .2);
+				.busked-remove{border-color:#fe0303;
+					&:before, &:after{background-color: #fe0303;}
+					&:hover{background-color:#fe0303;
+						&:before, &:after{background-color: #fff;}
+					}
+				}
+			}
+		}
+		.busked-remove{position: absolute;cursor: pointer;left:20px;top:calc(50% - 15px);width: 30px;height: 30px;border-radius: 50%;border:1px solid #b4aeab;transition:border-color 300ms ease, background-color 300ms ease;
+			&:before, &:after{content: '';display:block;position: absolute;width: 20px;height: 1px;transform-origin:50% 50%;background-color:#b4aeab;left: calc(50% - 10px);top:calc(50% - 0px);transition:background-color 300ms ease;}
+			&:before{transform:rotate(-45deg);}
+			&:after{transform:rotate(45deg);}
+		}
 		.busked-img{width: 150px;height: 150px;border:1px solid #dadada;background-color: #fff;position: relative;display: inline-block;vertical-align: top;
 			img{max-width: 149px;position: absolute;top: 50%;left: 50%;transform:translate(-50%, -50%);overflow: hidden;}
 		}
@@ -295,11 +309,9 @@
 
 	.fancybox-close{right: 20px;top:20px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
 		 &:before, &:after{content: '';position: absolute;display: block;width: 21px;height: 2px;background-color:#fff;top:48%;left:calc(50% - 11px);}
-		 &:before{transform:rotate(-45deg);top:calc(50% - 3px);}
+		 &:before{transform:rotate(-45deg);top:calc(50% - 1px);}
 		 &:after{transform:rotate(45deg);}
-		 &:hover{background-color: #d24a43;
-			&:before, &:after{background-color: #dcdcdc;}
-		 }
+		 &:hover{background-color: #d24a43;}
 	}
 
 /* /fancybox */

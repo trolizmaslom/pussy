@@ -93,6 +93,12 @@ function headerShowForm(){
 
     });
 
+};
+
+//busked func
+function buskedFunc(){
+
+    //busked call popup
     $('.fancybox-basked').fancybox({
         fitToView:true,
         autoSize:true,
@@ -100,13 +106,12 @@ function headerShowForm(){
         wrapCSS:'busked-wrapper-fancybox'
     });
 
-};
+    //busked close popup
+    $('.busked-callback-link').click(function(){
 
-//busked func
-function buskedFunc(){
+        $.fancybox.close();
 
-    //busked timer var for buskedItemSum
-    var timer = null;
+    });
 
     //busked item sum
     function buskedItemSum(item){
@@ -208,8 +213,21 @@ function buskedFunc(){
 
     };
 
+    //remove item from busked
+    function removeItemFromBusked(){
+
+        $(document).on('click','.busked-remove', function(){
+            $(this).parents('.busked-item').remove();
+            buskedSumByLoad();
+            var height = $('#busked').height();
+            $('.busked-wrapper-fancybox .fancybox-inner').height(height);
+        });
+
+    };
+
     buskedCountChange();
     buskedSumByLoad();
+    removeItemFromBusked();
 
 }
 
