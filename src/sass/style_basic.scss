@@ -33,4 +33,6 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 ::-moz-placeholder {color:#b3b3b3;font-style: 10px;font-weight: 400;font-family: 'PFDinTextPro',sans-serif;letter-spacing: .75px;transition:color 300ms ease;}
 :-ms-input-placeholder {color:#b3b3b3;font-style: 10px;font-weight: 400;font-family: 'PFDinTextPro',sans-serif;letter-spacing: .75px;transition:color 300ms ease;}
 
+
+::selection { background: #79575E;color: white;}
 /*End Layout*/
