@@ -41,24 +41,83 @@ function itemCard(){
     if($('.item-card-img-item')){
         function clickOnItem(){
             $('.item-card-img-item').click(function(event) {
-                if($(this).is('.active')){
-                    console.log('clikc on actie');
+                if($(this).is('.slick-current')){
                     return false;
                 }
                 var img = $(this).find('img').attr('src');
-                $('.item-card-img-item').removeClass('active');
-                $(this).addClass('active');
-                $('.item-card-main-img').find('img').attr('src', img);
+                $('.item-card-img-item').removeClass('slick-current');
+                $(this).addClass('slick-current');
+                $('.item-card-main-img').find('img').fadeOut('300', function() {
+                    $(this).attr('src', img).fadeIn(500);
+                });
             });
         }
         clickOnItem();
+
+        //start slider
+        if($('.item-card-img-item').length>4){
+
+            $('.item-card-column').on('init beforeChange', function(){
+              showHideArrow();
+            });
+
+            $('.item-card-column').slick({
+                infinite: false,
+                focusOnSelect:true,
+                prevArrow:'<button type="button" class="slick-prev"></button>',
+                nextArrow:'<button type="button" class="slick-next"></button>',
+                vertical:true,
+                draggable:false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1
+            });
+
+            function showHideArrow(){
+                var lastItem = $('.item-card-img-item').last().is('.slick-current');
+                var firstItem = $('.item-card-img-item').first().is('.slick-current');
+                if(firstItem){
+                    $('.item-card .slick-prev').hide();
+                }else{
+                    $('.item-card .slick-prev').show();
+                }
+                if(lastItem){
+                    $('.item-card .slick-next').hide();
+                }else{
+                    $('.item-card .slick-next').show();
+                }
+            }
+
+            //fix to slider
+            $('.item-card-left .slick-arrow').click(function(event) {
+                showHideArrow();
+                var img = $('.item-card-img-item.slick-current').find('img').attr('src');
+                    $('.item-card-main-img').find('img').fadeOut('300', function() {
+                        $(this).attr('src', img).fadeIn(500);
+                    });
+
+            });
+        }
     }
+}
+
+function fancyboxItemCard(){
+  $('.item-card-fancybox').fancybox({
+    openEffect  : 'fade',
+    closeEffect : 'fade',
+    autoResize:true,
+    wrapCSS:'item-card-fancy',
+    'closeBtn' : true,
+    fitToView:true,
+    padding:'0'
+  })
 }
 
 $(document).ready(function(){
     worksHeight($('.grid_item'));
     paralaxCat($('.parallax-cat'));
     itemCard();
+    fancyboxItemCard();
 });
 
 $(window).load(function(){
