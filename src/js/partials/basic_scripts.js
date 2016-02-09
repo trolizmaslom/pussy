@@ -129,6 +129,7 @@ function cutText(){
 $(document).ready(function() {
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
+
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
     };
@@ -138,8 +139,15 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
     };
+
     $('.footer_placeholder').height($('.footer').outerHeight());
+});
+$(window).load(function(){
+    if ($(window).width() > 993) {
+        oneHeightItemsMain2();
+    };
 });
