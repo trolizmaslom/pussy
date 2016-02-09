@@ -163,7 +163,8 @@ $border:#c48e58;
     }
 /*END contacts*/
 /*about-us*/
-    .about-us{
+    .about-us{ position: relative;
+        .whiskas{position: absolute; bottom: 0; right:0;}
         .about-wrapp{     padding-top: 106px;
             .about-pane1{
                 .about-pane2{height: 481px; overflow: auto; width: 100%; }
