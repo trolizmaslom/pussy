@@ -146,6 +146,77 @@ function validationCall(form){
 
     }
 }
+
+function validationCallEmail(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                popNextEmail();
+            }
+            else {
+               thisForm.trigger('reset');
+            }
+
+        }
+    });
+
+    function popNextEmail(){
+        $.fancybox.open("#call_success_email",{
+            padding:0,
+            fitToView:false,
+            wrapCSS:"call-popup",
+            autoSize:true,
+            'closeBtn': false,
+            'helpers': {
+                    'overlay' : {'closeClick': false}
+                }
+        });
+    }
+}
+
+function validationCallPass(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                popNextPass();
+            }
+            else {
+               thisForm.trigger('reset');
+            }
+
+        }
+    });
+
+    function popNextPass(){
+        $.fancybox.open("#call_success_pass",{
+            padding:0,
+            fitToView:false,
+            wrapCSS:"call-popup",
+            autoSize:true,
+            'closeBtn': false,
+            'helpers': {
+                    'overlay' : {'closeClick': false}
+                }
+        });
+    }
+}
+
 /*маска на инпуте*/
 function Maskedinput(){
     if($('.tel-mask')){
@@ -170,6 +241,10 @@ function fancyboxForm(){
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
+
+   validate('.email-change', {submitFunction:validationCallEmail});
+   validate('.pass-change', {submitFunction:validationCallPass});
+
    Maskedinput();
    fancyboxForm();
 
