@@ -8,6 +8,10 @@
     /*like massonry*/
     .paral-cat-1{max-width: 98px;}
     .paral-cat-2{max-width: 98px;}
+
+    /*item-card --------------------------------------------*/
+    .item-card .item-card-center {padding-bottom: 45px;}
+    /*/item-card --------------------------------------------*/
 }
 @media screen and (max-width: 1280px){
     /*like massonry*/
@@ -104,7 +108,7 @@
 
     /*popup*/
 
-    #item-card-pop{width: auto;padding: 25px;}
+    #item-card-pop{width: auto;padding: 35px 25px;}
     .item-card-pop-title{float: none;width: 100%;padding: 10px;padding-bottom: 20px;}
     .item-card-pop-buy{float: none;display: block;width: 100%;margin:0 auto;}
     .item-card-main-img{height: 360px !important;max-width: 360px !important;float: none !important;display: block;margin:0 auto;margin-bottom: 100px;}
@@ -212,6 +216,14 @@
     /*item-card --------------------------------------------*/
 
     /*popup*/
+    .item-card {padding-bottom: 90px;padding-top: 70px;
+        .item-card-right{max-width: 320px;}
+        .item-card-table{width: 100%;}
+        .item-card-table .item-card-col-left{max-width: 185px;}
+        .item-card-left{width: 100%}
+        .item-card-center{padding-bottom: 22px;}
+        .item-card-texter{padding-top: 30px;}
+    }
 
     #item-card-pop{
         .item-card-pop-title{font-size: 18px;line-height: 22px;text-align: center;}
