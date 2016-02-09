@@ -94,7 +94,10 @@ function headerShowForm(){
     });
 
     $('.fancybox-basked').fancybox({
-
+        fitToView:true,
+        autoSize:true,
+        padding:0,
+        wrapCSS:'busked-wrapper-fancybox'
     });
 
 };
