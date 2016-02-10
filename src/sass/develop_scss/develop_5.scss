@@ -116,7 +116,9 @@ $border:#c48e58;
 /*404*/
     .page404{
         .page404-wrap{position: relative;
-            .bg{position: relative; z-index: 0;}
+            .bg{position: relative; z-index: 0;
+                img{max-width: none;    left: 50%;    transform: translateX(-50%);    position: absolute;}
+            }
             .text{width: 100%; text-align: center; padding-top: 125px;  position: absolute; z-index: 1000; top: 0;
                 p{color: #fff; font:400 30px/30px 'Neris';
                     &:nth-child(1){text-transform: uppercase; font:400 72px/72px 'NeoSans';}
@@ -180,11 +182,9 @@ $border:#c48e58;
                 .about-pane3{}
                 .title-text{color: #d39f68;      padding-left: 15px;  padding-bottom: 12px;}
                 .content-box{padding-bottom: 80px;
-                    p{font:400 18px/21px 'PFDinTextPro'; color:#272827; }
-                    .left{float:left; margin: 7px 25px 7px 0;}
-                    .right{float:right; margin: 7px 0 7px 25px;}
-                    .imgs{border: 1px solid $border; border-radius: 5px; overflow: hidden; position: relative;}
-
+                    p{font:400 18px/21px 'PFDinTextPro'; color:#272827;
+                        span{border: 1px solid $border; border-radius: 5px; overflow: hidden; position: relative; float:left; margin: 7px 25px 7px 0;}
+                    }
                 }
             }
         }
