@@ -39,9 +39,15 @@ function validate(form, options){
                 if($(element).closest('.form_row').is('.error')){
                     $(element).closest('.form_row').removeClass('error').addClass('valid');
                 }
+                if($('.anchor')){
+                    if($('#password').hasClass('error') ||  $('#re_password').hasClass('error')){ console.log('222222');
+                            $('.anchor').addClass('errorA');
+                    }
+                }
                 if( typeof(setings.unhighlightFunction) === 'function' ) {
                     setings.unhighlightFunction(form);
                 }
+
             },
             submitHandler: function(form) {
                 if( typeof(setings.submitFunction) === 'function' ) {
@@ -114,6 +120,49 @@ function validationCall(form){
         data: formSur,
         method:'POST',
         success : function(data){
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                popNext();
+            }
+            else {
+               thisForm.trigger('reset');
+            }
+
+        }
+    });
+
+    function popNext(){
+        $.fancybox.open("#call_success",{
+            padding:0,
+            fitToView:false,
+            wrapCSS:"call-popup",
+            autoSize:true,
+            afterClose: function(){
+                $('form').trigger("reset");
+                clearTimeout(timer);
+            }
+        });
+        var timer = null;
+
+        timer = setTimeout(function(){
+            $('form').trigger("reset");
+            $.fancybox.close("#call_success");
+        },2000);
+
+
+    }
+}
+function validationCallREG(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+
             if ( data.trim() == 'true') {
                 thisForm.trigger("reset");
                 popNext();
@@ -242,7 +291,7 @@ $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
    validate('.recover-form', {submitFunction:validationCall});
-   validate('.registration-form', {submitFunction:validationCall});
+   validate('.registration-form', {submitFunction:validationCallREG});
 
    validate('.email-change', {submitFunction:validationCallEmail});
    validate('.pass-change', {submitFunction:validationCallPass});
