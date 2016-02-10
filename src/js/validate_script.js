@@ -47,7 +47,7 @@ function validate(form, options){
                 if( typeof(setings.submitFunction) === 'function' ) {
                     setings.submitFunction(form);
                 } else {
-                    $form.submit();
+                    //$form.submit();
                 }
             }
         });
