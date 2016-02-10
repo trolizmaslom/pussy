@@ -29,6 +29,16 @@
             }
         }
     }
+
+    @media screen and (max-width: 768px){
+        .page404{
+            .page404-wrap{
+                .bg{
+                    img{top:50%; transform: translate(-50%, -50%);}
+                }
+            }
+        }
+    }
     @media screen and (max-width: 666px){
         .page404{
             .page404-wrap{
@@ -120,10 +130,11 @@
             .about-wrapp{ padding-top: 40px;
                  .about-pane1{
                     .content-box{padding-bottom: 80px;
-                        .imgs{float: none; border: none; width: 100%; margin: 7px 0 ;
-                            img{margin:0 auto; display: block;}
+                        p{
+                            span{float: none; border: none; width: 100%; margin: 7px 0 ;
+                                img{margin:0 auto; display: block;}
+                            }
                         }
-
                     }
                 }
             }
