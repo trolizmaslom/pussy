@@ -12,6 +12,10 @@
     /*item-card --------------------------------------------*/
     .item-card .item-card-center {padding-bottom: 45px;}
     /*/item-card --------------------------------------------*/
+
+    /*top-block*/
+    .top-block .title-text:after{right: 1px;top: -62%;}
+    /*/top-block*/
 }
 @media screen and (max-width: 1280px){
     /*like massonry*/
