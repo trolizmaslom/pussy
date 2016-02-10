@@ -186,7 +186,7 @@
 				}
 			}
 			.header-form-wrap{top:auto;bottom:100%;padding-top: 0;padding-bottom: 25px;
-				&:before{top:0;bottom: 25px;box-shadow:0 -8px 27px 0 rgba(35, 6, 1, 0.36), 0 25px 32px 0 rgba(35, 6, 1, 0.1);}
+				&:before{top:0;bottom: 25px;box-shadow:0 -8px 27px 0 rgba(35, 6, 1, 0.36), 0 25px 32px 0 rgba(35, 6, 1, 0.1);border-radius: 25px 25px 0 25px;}
 				.header-form{border-radius: 25px 25px 0 25px;
 					&:before{bottom: auto;top:100%;border-color: #fff #fff transparent transparent;}
 				}

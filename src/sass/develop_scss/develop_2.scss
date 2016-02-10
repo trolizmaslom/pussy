@@ -63,7 +63,7 @@
     }
 }
 // /popular items
-// -----------------------------------------------------------------------------------------------------------
+// ------------------cabinet-wrap-----------------------------------------------------------------------------------------
 
 // news and news-on block are the same styles
 
@@ -152,7 +152,11 @@
 
 // personal cabinet
 
-.cabinet-wrap{ background-image: url(../images/bg-cat-cabinet.png); background-position: left bottom; background-repeat: no-repeat; padding-top: 107px; margin-bottom: 200px; color: #e5a165; background-color: #fafdff;
+.personal-cabinet-background{position: relative;
+    &:before{content: '';position: absolute;left: 0;top:0;bottom: 0;right: 0;background-color: #fafdff;background-image:url(../images/bg-cat-cabinet.png);background-position: left bottom; background-repeat: no-repeat;}
+}
+
+.cabinet-wrap{ padding-top: 107px; color: #e5a165; background-color: #fafdff;
     .convert{
         .forming-block{padding-top: 37px; min-height: 450px;
             .row-sample{ border-bottom: 1px solid #cf8746; width: 100%; max-width: 520px; font-family: 'PFDinTextPro'; font-size: 14px; line-height: 26px; margin-bottom: 24px; transition: all 0.3s;
@@ -205,4 +209,4 @@
 
 // /popup email
 
-
+.news-lol-scroll .jspVerticalBar {display: none;}

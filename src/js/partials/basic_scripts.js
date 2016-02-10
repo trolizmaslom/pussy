@@ -131,7 +131,7 @@ $(document).ready(function() {
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').height() - $('.header').height()));
 
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
@@ -149,7 +149,7 @@ $(window).resize(function() {
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').height() - $('.header').height()));
 
 
 });
@@ -160,6 +160,6 @@ $(window).load(function(){
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
-    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').outerHeight() - $('.header').outerHeight()));
+    $('.wrapper-main').css('min-height', ($(window).height() - $('.footer').height() - $('.header').height()));
 
 });
