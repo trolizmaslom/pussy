@@ -39,11 +39,7 @@ function validate(form, options){
                 if($(element).closest('.form_row').is('.error')){
                     $(element).closest('.form_row').removeClass('error').addClass('valid');
                 }
-                if($('.anchor')){
-                    if($('#password').hasClass('error') ||  $('#re_password').hasClass('error')){ console.log('222222');
-                            $('.anchor').addClass('errorA');
-                    }
-                }
+
                 if( typeof(setings.unhighlightFunction) === 'function' ) {
                     setings.unhighlightFunction(form);
                 }

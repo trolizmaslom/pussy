@@ -5,7 +5,7 @@ $(document).ready(function(){
     if($('.contacts').length>0){
      googleMap('mapInit');
     };
-    /*setInterval(XXL,500);*/
+
 
 });
 
@@ -17,13 +17,7 @@ $(window).resize(function(){
     aboutScroll();
 });
 
-function XXL(){
-    if($('.anchor')){
-        if($('#password').hasClass('error') ||  $('#re_password').hasClass('error')){ console.log('222222');
-                $('.anchor').addClass('errorA');
-            }
-        }
-}
+
 
 
 function aboutScroll(){

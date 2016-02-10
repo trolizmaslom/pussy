@@ -227,26 +227,22 @@ $border:#c48e58;
                                     &:nth-child(2){display: none;}
                                 }
                             }
-                            &.errorA{
-                                .pass-check{opacity: 1;
-                                    p{
-                                        &:nth-child(1){display: none;}
-                                        &:nth-child(2){display: block;}
-                                    }
-                                }
-                            }
+
                         }
-                        &.error{
-                            .pass-check{opacity: 1;
-                                p{
-                                    &:nth-child(1){display: none;}
-                                    &:nth-child(2){display: block;}
-                                }
-                            }
-                        }
-                        #re_password-error{display: none!important;}
-                        #password-error{display: none!important;}
                     }
+                    #re_password{
+                        &.error + .pass-check{opacity: 1;
+                            p{
+                                &:nth-child(1){display: none;}
+                                &:nth-child(2){display: block;}
+                            }
+                        }
+
+
+
+                    }
+                    #re_password-error{display: none!important;}
+                    #password-error{display: none!important;}
                 }
             }
             .buttons_form_main{margin-top: 30px;}
