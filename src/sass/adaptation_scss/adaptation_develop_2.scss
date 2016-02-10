@@ -53,6 +53,10 @@
         }
     }
 
+    .personal-cabinet-background{
+        &:before{background-image:none;}
+    }
+
     .cabinet-wrap .convert .forming-block {
         .hipe-block { margin-bottom: 30px;}
         .row-sample {max-width: 100%; }
@@ -90,11 +94,13 @@
     .best-bg-wrap .wrap-one-news {padding-bottom: 20px; padding-top: 20px;}
 
 
-    .cabinet-wrap .convert .forming-block .row-sample{
-        .context {float: none;padding-left: 8px; width: 100%;
-             .hide-pass {text-align: left; width: 250px;}
+    .cabinet-wrap{padding-bottom: 100px;
+        .convert .forming-block .row-sample{
+            .context {float: none;padding-left: 8px; width: 100%;
+                 .hide-pass {text-align: left; width: 250px;}
+            }
+            .naming {float: none; }
         }
-        .naming {float: none; }
     }
 
 }
