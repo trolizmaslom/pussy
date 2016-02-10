@@ -103,7 +103,7 @@
 					}
 				}
 				.header-navigate-main{display: block;position: absolute;top:-400px;background-color: #f4f4f4;margin-left: -15px;z-index: 0;padding-top:100px;text-align:center;transition:top 1000ms ease, bottom 1000ms ease;
-					&:after{content:'';display:block;position: absolute;width:200%;top:100%;left: -100%;background-image:url(../images/header-background-img-sendwich.png);background-repeat: repeat-x;height: 39px;background-position: 30% 0;transition:left 1000ms ease;}
+					&:after{content:'';display:block;position: absolute;width:200%;top:100%;left: -100%;background-image:url(../images/header-background-img-sendwich-main.png);background-repeat: repeat-x;height: 52px;background-position: 30% 0;transition:left 1000ms ease;}
 					.header-menu{display: inline;position: relative;z-index: 1;padding-top: 0;
 						&.header-left{z-index: 2;}
 						&>ul{display: inline;}
