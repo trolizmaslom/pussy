@@ -17,7 +17,7 @@ function validate(form, options){
 
         $form.validate({
             errorClass : 'errorText',
-            focusCleanup : true,
+            focusCleanup : false,
             focusInvalid : false,
             invalidHandler: function(event, validator) {
                 if(typeof(setings.errorFunction) === 'function'){
@@ -28,6 +28,7 @@ function validate(form, options){
                 error.appendTo( element.closest('.form_input'));
             },
             highlight: function(element, errorClass, validClass) {
+                console.log($(element)+'  '+errorClass+'  '+validClass+' go');
                 $(element).addClass('error');
                 $(element).closest('.form_row').addClass('error').removeClass('valid');
                 if( typeof(setings.highlightFunction) === 'function' ) {
@@ -287,6 +288,7 @@ $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
    validate('.recover-form', {submitFunction:validationCall});
+
    validate('.registration-form', {submitFunction:validationCallREG});
 
    validate('.email-change', {submitFunction:validationCallEmail});

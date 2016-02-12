@@ -115,11 +115,11 @@ $border:#c48e58;
 /*END katalog*/
 /*404*/
     .page404{
-        .page404-wrap{position: relative;
+        .page404-wrap{position: relative;min-height: 90vh;
             .bg{position: relative; z-index: 0;
-                img{max-width: none;    left: 50%;    transform: translateX(-50%);    position: absolute;}
+                img{max-width: none;left: 50%;top:50%;transform: translate(-50%,-30%);position: absolute;}
             }
-            .text{width: 100%; text-align: center; padding-top: 125px;  position: absolute; z-index: 1000; top: 0;
+            .text{width: 100%; text-align: center; padding-top: 125px;  position: absolute; z-index: 1; top: 0;
                 p{color: #fff; font:400 30px/30px 'Neris';
                     &:nth-child(1){text-transform: uppercase; font:400 72px/72px 'NeoSans';}
                 }
