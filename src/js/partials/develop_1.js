@@ -18,6 +18,10 @@ function headerMenuHover(){
 		}
 	);
 
+    $('.second-level').each(function() {
+        $(this).prepend('<div class="second-level-icon"></div>');
+    });
+
 	$('.second-level .second-level-icon').click(function(){
 
 		var parent = $(this).parent();
