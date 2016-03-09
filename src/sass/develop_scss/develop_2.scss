@@ -46,16 +46,16 @@
                 &:after{opacity: 1;}
                 img{transform: rotate(-3deg) scale(1.2);}
             }
-            .maming,.pricing{font-size: 19px;}
         }
-        .solution-conf{border: 1px solid #b76c26; border-radius: 8px; margin-bottom: 20px; background-image: url(../images/button-background.png);box-shadow: 4px 4px 5px 0 rgba(25, 14, 4, 0.15); background-color:#b76c26;}
-        .conteiner-img{width: 100%; height: auto; border-radius: 2px; position: relative; z-index: 5; overflow: hidden;
+        .solution-conf{border: 1px solid #b76c26; border-radius: 8px; margin-bottom: 20px; background-image: url(../images/button-background.png);box-shadow: 4px 4px 5px 0 rgba(25, 14, 4, 0.15); background-color:#b76c26; position: relative;}
+        .conteiner-img{width: 100%; height: auto; border-radius: 2px; position: relative; z-index: 5; overflow: hidden; padding-bottom: 40px;
             img{transition: all 0.5s;transform: scale(1); width: 100%; height: auto;}
             &:after{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0, .45);opacity: 0;content: '';z-index: 2;transition:all ease-out .5s;}
         }
-        .aftertext{ width: 100%; position: relative;font-family: 'PFDinTextPro'; font-size: 14px; color: #ffffff;
-            .maming{ font-weight: 400; width: calc(100% - 150px); text-align: center; line-height: 40px;transition:font-size ease .2s;}
-            .pricing{ position: absolute; right: 0px; top: 0; background-image: url(../images/bg-pricing.png); background-repeat: repeat-x; height: 57px; width: 150px; text-align: center; font-weight: 700; line-height: 40px;transition:font-size ease .2s;
+        .aftertext{ width: 100%; position: absolute;font-family: 'PFDinTextPro'; font-size: 14px; color: #ffffff;  background-image: url(../images/button-background.png); background-color: #b76c26;border-radius: 0 8px 8px 8px;bottom: -1px;z-index: 10; border: 1px solid #b76c26; border-top-color: transparent; left: -1px; right: -3px;  display: inline-block;
+            .maming{ font-weight: 400; margin-right: 150px; text-align: center; line-height: 40px;transition:font-size ease .2s; }
+            .pricing{ position: absolute; right: -3px; top: 0; bottom: 0; background-image: url(../images/bg-pricing.png); background-repeat: repeat-x; background-size: 50px 100%;  height: auto; width: 150px; text-align: center; font-weight: 700; line-height: 40px;transition:font-size ease .2s; display: flex; align-items: center;justify-content: center;
+                &:after{content: ''; position: absolute; height: 15px;left: 0; right: -0px; z-index: 11; bottom: -12px; background-image: url(../images/derty.png); background-repeat: repeat-x; background-size: 50px 100%;}
                 span{font-weight: 400;}
             }
         }
@@ -63,7 +63,7 @@
     }
 }
 // /popular items
-// ------------------cabinet-wrap-----------------------------------------------------------------------------------------
+// ------------------cabinet-wrap--------------------------------------------------------------
 
 // news and news-on block are the same styles
 
