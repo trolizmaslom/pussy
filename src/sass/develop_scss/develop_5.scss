@@ -10,8 +10,8 @@ $border:#c48e58;
                             img{position: absolute; max-width: none; left:50%; top:50%; transform: translate3d(-50%, -50%, -10px) scale(1.1) rotate(0); transition: transform 500ms; }
                             .bgc{background-color: rgba(0,0,0, 0.5);  position: absolute; top:0;  width:100%; height:100%;  transition: background-color 500ms;}
                         }
-                        .txt{  position: absolute; top:0; width:100%; text-align: center; padding-top: 54px;
-                            p{font: 700 24px/24px 'PFDinTextPro'; color: #fff; text-transform: uppercase; }
+                        .txt{  position: absolute; top:0; width:100%; text-align: center;height: 100%; display: flex; padding: 0 5px;
+                            p{font: 700 24px/24px 'PFDinTextPro'; color: #fff; text-transform: uppercase; margin:auto; }
                         }
                         &:hover{
                             .imgs{
@@ -78,7 +78,7 @@ $border:#c48e58;
                         #scroll-pane{height: 881px; overflow: auto; width: 100%; }
                         .jspVerticalBar{display: none;}
                        .pane-three{ }
-                        .item{ height: 353px; max-width: 284px; width: 100%; overflow: hidden; position: relative; display: inline-block; margin-bottom: 5px;
+                        .item{  max-width: 284px; width: 100%;  position: relative; display: inline-block; margin-bottom: 5px;     vertical-align: top;
                             &.big{max-width: 580px;
                                 .imgs{.img-wrap{max-width: 580px;}}
                             }
@@ -90,8 +90,8 @@ $border:#c48e58;
                                     p{font: 700 14px/14px 'PFDinTextPro'; color:#fff; text-transform: uppercase;}
                                 }
                             }
-                            .txt{ background-color: #fff;    border:none; padding: 32px 40px 0;     height: 142px; transition: border 500ms;
-                                .item-title{font: 400 14px/17px 'PFDinTextPro'; color:#47231a; width: 100%; max-width: 200px; text-align: center; margin-bottom: 4px; height: 34px; overflow: hidden;  margin: 0 auto;}
+                            .txt{ background-color: #fff;  border:none; padding: 32px 40px 0;  transition: border 500ms;
+                                .item-title{font: 400 14px/17px 'PFDinTextPro'; color:#47231a; width: 100%; max-width: 200px; text-align: center; margin-bottom: 4px;   margin: 0 auto;}
                                 .item-price{font: 400 12px/12px 'PFDinTextPro'; color:#be864d;width: 100%;text-align: center;
                                     b{font: 700 20px/20px 'PFDinTextPro'; color:#be864d;}
                                 }

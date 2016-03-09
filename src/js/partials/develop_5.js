@@ -5,8 +5,7 @@ $(document).ready(function(){
     if($('.contacts').length>0){
      googleMap('mapInit');
     };
-
-
+    oneHeightSec($('.catalog .items-wrapp .item .txt'));
 });
 
 $(window).load(function(){
@@ -15,9 +14,22 @@ $(window).load(function(){
 
 $(window).resize(function(){
     aboutScroll();
+    oneHeightSec($('.catalog .items-wrapp .item .txt'));
 });
 
 
+ function oneHeightSec(block){
+        var height=0;
+        block.removeAttr('style');
+        block.each(function(){
+            if($(this).height()>height){
+                height=$(this).height();
+            }
+        });
+        height+=83;
+        block.css('height', height);
+
+    }
 
 
 function aboutScroll(){
