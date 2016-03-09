@@ -109,7 +109,11 @@
 				}
 			}
 			.enter-wrap-link{cursor: pointer;
-				&:hover, &.active{
+				&:hover{
+					.enter-wrap-text{color:#90bcb2;}
+					.enter-wrap-icon{border-color:#90bcb2 transparent transparent transparent;}
+				}
+				&.active{
 					.enter-wrap-text{color:#90bcb2;}
 					.enter-wrap-icon{border-color:#90bcb2 transparent transparent transparent;transform:rotate(0deg);}
 				}
