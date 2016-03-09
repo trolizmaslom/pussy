@@ -18,28 +18,26 @@ function convertationLook() {
 
     $('.img-hovered-click1').click(function(){
         if (flagShtock1) {
-            $(this).closest('.context').find('input').attr('type', 'text');
-            $(this).find('img').attr('src' , 'images/in-ie8-not-belive.png' );
+            $(this).closest('.context').find('input[type=password]').attr('type', 'text');
+            $(this).find('img').attr('src' , template_url+'images/in-ie8-not-belive.png' );
             flagShtock1 = false ;
-
         }
         else{
-            $(this).closest('.context').find('input').attr('type', 'password');
-            $(this).find('img').attr('src' , 'images/in-ie8-belive.png');
+            $(this).closest('.context').find('input[type=text]').attr('type', 'password');
+            $(this).find('img').attr('src' , template_url+'images/in-ie8-belive.png');
             flagShtock1 = true ;
         };
-
     });
 
     $('.img-hovered-click2').click(function(){
         if (flagShtock2) {
-            $(this).closest('.context').find('input').attr('type', 'text');
-            $(this).find('img').attr('src' , 'images/in-ie8-not-belive.png' );
+            $(this).closest('.context').find('input[type=password]').attr('type', 'text');
+            $(this).find('img').attr('src' , template_url+'images/in-ie8-not-belive.png' );
             flagShtock2 = false ;
         }
         else{
-            $(this).closest('.context').find('input').attr('type', 'password');
-            $(this).find('img').attr('src' , 'images/in-ie8-belive.png');
+            $(this).closest('.context').find('input[type=text]').attr('type', 'password');
+            $(this).find('img').attr('src' , template_url+'images/in-ie8-belive.png');
             flagShtock2 = true ;
         };
 
