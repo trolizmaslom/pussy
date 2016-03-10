@@ -149,49 +149,7 @@ function validationCall(form){
 
     }
 }
-function validationCallREG(form){
 
-  var thisForm = $(form);
-  var formSur = thisForm.serialize();
-
-    $.ajax({
-        url : thisForm.attr('action'),
-        data: formSur,
-        method:'POST',
-        success : function(data){
-
-            if ( data.trim() == 'true') {
-                thisForm.trigger("reset");
-                popNext();
-            }
-            else {
-               thisForm.trigger('reset');
-            }
-
-        }
-    });
-
-    function popNext(){
-        $.fancybox.open("#call_success",{
-            padding:0,
-            fitToView:false,
-            wrapCSS:"call-popup",
-            autoSize:true,
-            afterClose: function(){
-                $('form').trigger("reset");
-                clearTimeout(timer);
-            }
-        });
-        var timer = null;
-
-        timer = setTimeout(function(){
-            $('form').trigger("reset");
-            $.fancybox.close("#call_success");
-        },2000);
-
-
-    }
-}
 
 function validationCallEmail(form){
 
@@ -304,12 +262,61 @@ function validationCallEntrance(form){
         }
     });
 }
+function validationCallRecovery(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+               $('.wrong-pass').removeClass('showThis');
+               $("#new-pass-false").addClass('hideThis');
+               $(".recover-form").addClass('hideThis');
+               $("#new-pass-succes").removeClass('hideThis');
+            }
+            else {
+                thisForm.trigger('reset');
+                $('.wrong-pass').addClass('showThis');
+                $("#new-pass-false").removeClass('hideThis');
+               $("#new-pass-succes").addClass('hideThis');
+               $(".recover-form").removeClass('hideThis');
+            }
+
+        }
+    });
+}
+function validationCallREG(form){
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                $('.wrong-pass').removeClass('showThis');
+            }
+            else {
+               thisForm.trigger('reset');
+               $('.wrong-pass').html('');
+               $('.wrong-pass').html('<p>'+data+'</p>');
+                $('.wrong-pass').addClass('showThis');
+            }
+
+        }
+    });
+}
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
-   validate('.recover-form', {submitFunction:validationCall});
 
-   validate('.registration-form', {submitFunction:validationCallREG});
+
 
    validate('.email-change', {submitFunction:validationCallEmail});
    validate('.pass-change', {submitFunction:validationCallPass});
@@ -318,6 +325,9 @@ $(document).ready(function(){
    fancyboxForm();
 
    validate('.header-form-top',{submitFunction:validationCallEntrance});
+    validate('.recover-form', {submitFunction:validationCallRecovery});
+    validate('.registration-form', {submitFunction:validationCallREG});
+
    validate('.header-form-bottom');
 
 });
