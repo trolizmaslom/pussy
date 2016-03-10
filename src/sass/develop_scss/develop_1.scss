@@ -202,7 +202,8 @@
 /* /header */
 
 /* form */
-
+	.showThis{opacity: 1;}
+	.wrong-pass{color: #f00; opacity:0; transition: opacity 300ms;}
 	.form{
 		.form_row{margin-bottom: 16px;
 			&:after{content:'';display: block;clear:both;}

@@ -283,7 +283,27 @@ function fancyboxForm(){
   })
 }
 
+function validationCallEntrance(form){
 
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+               $('.wrong-pass').removeClass('showThis');
+            }
+            else {
+                thisForm.trigger('reset');
+                $('.wrong-pass').addClass('showThis');
+            }
+
+        }
+    });
+}
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.contacts-form', {submitFunction:validationCall});
@@ -297,7 +317,7 @@ $(document).ready(function(){
    Maskedinput();
    fancyboxForm();
 
-   validate('.header-form-top');
+   validate('.header-form-top',{submitFunction:validationCallEntrance});
    validate('.header-form-bottom');
 
 });
