@@ -14,6 +14,8 @@ function convertationLook() {
     var flagShtock1 = true;
     var flagShtock2 = true;
     var redFlag = true;
+    var redFlag2 = true;
+    var redFlag3 = true;
     var yelowFlag = true;
 
     $('.img-hovered-click1').click(function(){
@@ -61,6 +63,58 @@ function convertationLook() {
             redFlag = true ;
             setTimeout(function(){
                 $('.olways-click-some1').find('span').html('Изменить');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '48px');
+            $(this).find('a').removeClass('green-button');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).slideUp(300);
+        }
+
+    });
+    $('.olways-click-some3').click(function(){
+
+        if (redFlag2){
+            redFlag2 = false ;
+            setTimeout(function(){
+                $('.olways-click-some3').find('span').html('Отмена');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '24px');
+            $(this).find('a').addClass('green-button');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).slideDown( 300 );
+
+
+        }
+        else{
+            redFlag2 = true ;
+            setTimeout(function(){
+                $('.olways-click-some3').find('span').html('Изменить');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '48px');
+            $(this).find('a').removeClass('green-button');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).slideUp(300);
+        }
+
+    });
+    $('.olways-click-some4').click(function(){
+
+        if (redFlag3){
+            redFlag3 = false ;
+            setTimeout(function(){
+                $('.olways-click-some4').find('span').html('Отмена');
+
+            }, 300);
+            $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '24px');
+            $(this).find('a').addClass('green-button');
+            $(this).closest('.big-row-convert').find('.hipe-block').stop( true, true ).slideDown( 300 );
+
+
+        }
+        else{
+            redFlag3 = true ;
+            setTimeout(function(){
+                $('.olways-click-some4').find('span').html('Изменить');
 
             }, 300);
             $(this).closest('.big-row-convert').find('.row-sample').css('margin-bottom', '48px');

@@ -220,6 +220,74 @@ function validationCallPass(form){
         });
     }
 }
+function validationCallName(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                popNextPass();
+            }
+            else {
+               thisForm.trigger('reset');
+            }
+
+        }
+    });
+
+    function popNextPass(){
+        $.fancybox.open("#call_success_name",{
+            padding:0,
+            fitToView:false,
+            wrapCSS:"call-popup_success",
+            autoSize:true,
+            'closeBtn': false,
+            'helpers': {
+                    'overlay' : {'closeClick': false}
+                }
+        });
+    }
+}
+function validationCallSurname(form){
+
+  var thisForm = $(form);
+  var formSur = thisForm.serialize();
+
+    $.ajax({
+        url : thisForm.attr('action'),
+        data: formSur,
+        method:'POST',
+        success : function(data){
+            if ( data.trim() == 'true') {
+                thisForm.trigger("reset");
+                popNextPass();
+            }
+            else {
+               thisForm.trigger('reset');
+            }
+
+        }
+    });
+
+    function popNextPass(){
+        $.fancybox.open("#call_success_surname",{
+            padding:0,
+            fitToView:false,
+            wrapCSS:"call-popup_success",
+            autoSize:true,
+            'closeBtn': false,
+            'helpers': {
+                    'overlay' : {'closeClick': false}
+                }
+        });
+    }
+}
 
 /*маска на инпуте*/
 function Maskedinput(){
@@ -304,8 +372,7 @@ function validationCallREG(form){
             }
             else {
                thisForm.trigger('reset');
-               $('.wrong-pass').html('');
-               $('.wrong-pass').html('<p>'+data+'</p>');
+
                 $('.wrong-pass').addClass('showThis');
             }
 
@@ -318,6 +385,8 @@ $(document).ready(function(){
 
 
 
+   validate('.name-change', {submitFunction:validationCallName});
+   validate('.surname-change', {submitFunction:validationCallSurname});
    validate('.email-change', {submitFunction:validationCallEmail});
    validate('.pass-change', {submitFunction:validationCallPass});
 
