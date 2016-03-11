@@ -225,8 +225,8 @@ $border:#c48e58;
             .content{    padding: 54px 100px 0;}
             .title-text{color: #d39f68;}
             .registration-form{
-                &.form{
-                    .form_input_wrap{ width: 287px; display: inline-block; vertical-align: top; margin-right: 48px; margin-bottom: 5px;
+                &.form{ text-align: center;
+                    .form_input_wrap{ width: 287px; display: inline-block; vertical-align: top; margin-right: 20px; margin-bottom: 15px;
                         &:last-child{margin-right: 0;}
                         .form_input{
                             input{height: 36px;}
@@ -254,8 +254,8 @@ $border:#c48e58;
                     #password-error{display: none!important;}
                 }
             }
-            .buttons_form_main{margin-top: 30px;}
-            .buttons_form_wrap{text-align: right;
+            .buttons_form_main{margin-top: 0px;}
+            .buttons_form_wrap{text-align: center;
                 .button span{height: 50px;}
             }
             .pass-check{    padding: 11px 0 0 33px; opacity:0;     height: 30px; transition: opacity 300ms;
