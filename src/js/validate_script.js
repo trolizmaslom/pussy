@@ -163,6 +163,7 @@ function validationCallEmail(form){
         success : function(data){
             if ( data.trim() == 'true') {
                 thisForm.trigger("reset");
+                var messageSucces =
                 popNextEmail();
             }
             else {
