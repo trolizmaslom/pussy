@@ -439,14 +439,14 @@ function buskedFunc(){
         var pattern = /^[0-9]\d*$/;
         var lastValue = 0;
 
-        $('.count-input input').keydown(function(){
+        $(document).on('keydown', '.count-input input', function(){
             if(pattern.test($(this).val())){
                 lastValue = $(this).val();
             }
 
         });
 
-        $('.count-input input').keyup(function(){
+        $(document).on('keyup', '.count-input input', function(){
 
             var parent = $(this).parents('.busked-item');
             var thisValue = $(this).val();
@@ -485,9 +485,18 @@ function buskedFunc(){
 
     function loadItemsInBusked(data){
 
-        $('.busked-items-wrap').html(data);
-        buskedSumByLoad();
-        isThereItemsInBusked();
+        if(data){
+            $('.busked-items-wrap').html(data);
+
+            var timer = setInterval(function(){
+                if($('.busked-item').length != 0){
+                    buskedSumByLoad();
+                    isThereItemsInBusked();
+                }
+            },0);
+        }else{
+           isThereItemsInBusked();
+        }
 
     };
 
