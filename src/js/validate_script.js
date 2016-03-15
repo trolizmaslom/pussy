@@ -253,6 +253,168 @@ function validationCallREG(form){
     });
 }
 
+//busked func
+function buskedFunc(){
+
+    //busked call popup
+    $('.fancybox-basked').fancybox({
+        fitToView:true,
+        autoSize:true,
+        padding:0,
+        wrapCSS:'busked-wrapper-fancybox'
+    });
+
+    //busked close popup
+    $('.busked-callback-link').click(function(){
+
+        $.fancybox.close();
+
+    });
+
+    //busked item sum
+    function buskedItemSum(item){
+
+        var itemSum = parseInt(item.find('.busked-description-price').data('price'))*parseInt(item.find('.count-input input').val());
+        item.find('.busked-description-value-text').text(itemSum);
+
+    }
+
+    //busked all sum
+    function buskedAllSum(){
+
+        var sum = 0;
+
+        $('.busked-item').each(function() {
+           sum+=parseInt($(this).find('.busked-description-value-text').text());
+        });
+
+        $('.busked-sum-value-numb').text(sum);
+        $('.hidden-busked-sum').val(sum);
+
+    }
+
+    //busked sum by load
+    function buskedSumByLoad(){
+
+        var itemsLength = $('.busked-item').length;
+        var point = 1;
+
+        $('.busked-item').each(function(){
+            buskedItemSum($(this));
+            if(point>=itemsLength){
+                buskedAllSum();
+            }
+            point++;
+        });
+    }
+
+    //watch is there items in busked
+    function isThereItemsInBusked(){
+
+        var itemsLength = $('.busked-item').length;
+        var emptyText = '<span class="empty-busked">Товаров нет.</span>';
+
+        if(!itemsLength){
+
+            $('.busked-wrapper-fancybox .busked-buttons').addClass('hide');
+            $('.busked-items-wrap').prepend(emptyText);
+
+        }else{
+
+            $('.busked-wrappper-fancybox .busked-buttons').removeClass('hide');
+            if($(".busked-items-wrap .empty-busked").length != 0){
+                $('.busked-items-wrap .empty-busked').remove();
+            }
+
+        }
+
+    };
+
+    //busked item count change
+    function buskedCountChange(){
+
+        $(document).on('click', '.busked-description-count .count-button', function(){
+
+            var parent = $(this).parent();
+            var parentItem = $(this).parents('.busked-item');
+            var inputValue = parseInt(parent.find('.count-input input').val());
+
+            if(!$(this).is('.disable')){
+                if($(this).is('.count-minus')){
+                    inputValue--;
+                    if(inputValue == 0){
+                        $(this).addClass('disable');
+                    }
+                }
+                else if($(this).is('.count-plus')){
+                    inputValue++;
+                    if(inputValue>0){
+                        parent.find('.count-minus').removeClass('disable');
+                    }
+                }
+
+                parent.find('input').val(inputValue);
+
+                buskedItemSum(parentItem);
+                buskedAllSum();
+
+            }
+        });
+
+        var pattern = /^[0-9]\d*$/;
+        var lastValue = 0;
+
+        $('.count-input input').keydown(function(){
+            if(pattern.test($(this).val())){
+                lastValue = $(this).val();
+            }
+
+        });
+
+        $('.count-input input').keyup(function(){
+
+            var parent = $(this).parents('.busked-item');
+            var thisValue = $(this).val();
+
+            if(!pattern.test(thisValue)){
+                $(this).val(lastValue);
+            }
+            else{
+                if(parseInt($(this).val())>0){
+                    $(this).parents('.busked-description-count').find('.count-minus').removeClass('disable');
+                }
+                else{
+                    $(this).parents('.busked-description-count').find('.count-minus').addClass('disable');
+                }
+                buskedItemSum(parent);
+                buskedAllSum();
+            }
+
+        });
+
+    };
+
+    //remove item from busked
+    function removeItemFromBusked(){
+
+        $(document).on('click','.busked-remove', function(){
+            $(this).parents('.busked-item').remove();
+            buskedSumByLoad();
+            isThereItemsInBusked();
+            var height = $('#busked').height();
+            $('.busked-wrapper-fancybox .fancybox-inner').height(height);
+
+        });
+
+    };
+
+    buskedCountChange();
+    buskedSumByLoad();
+    isThereItemsInBusked();
+    removeItemFromBusked();
+
+}
+
 //ajax func for programmer
 
 function someAjax(item, someUrl, someData, successFunc){
