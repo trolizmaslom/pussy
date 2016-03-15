@@ -261,12 +261,14 @@ function someAjax(item, someUrl, successFunc, someData){
 
         e.preventDefault();
 
+        var itemObject = $(this);
+
         $.ajax({
             url:someUrl,
             data:someData,
             method:'POST',
             success : function(data){
-                successFunc(data);
+                successFunc(data, itemObject);
             }
         });
 
@@ -281,6 +283,16 @@ function someAjax(item, someUrl, successFunc, someData){
 
 */
 
+// change button when item added to basket
+
+function lucky_cats_AddToBasket(data, itemObject){
+
+    $('.basked-icon-value span').html(data);
+
+    var buttonWrap = itemObject.parents('.item-card-right-bottom-right').addClass('active');
+
+}
+
 //busked func
 function buskedFunc(){
 
@@ -290,6 +302,39 @@ function buskedFunc(){
         autoSize:true,
         padding:0,
         wrapCSS:'busked-wrapper-fancybox'
+    });
+
+    // open fancybox by clicking text if item added
+    $(document).on('click','.in-busket-text', function(){
+
+        $.fancybox.open('#busked',{
+            fitToView:true,
+            autoSize:true,
+            padding:0,
+            wrapCSS:'busked-wrapper-fancybox'
+        });
+
+    });
+
+    // open busked order form
+    $(document).on('click','.busked-buttons-right-wrap .button', function(){
+
+       $.fancybox.open('#order-form',{
+            fitToView:true,
+            autoSize:true,
+            padding:0,
+            wrapCSS:'busked-order-fancybox',
+            afterLoad:function(){
+                $('html').addClass('fancybox-lock');
+                if($('html').is('.desktop')){
+                    $('html').addClass('fancybox-margin');
+                }
+            },
+            afterClose:function(){
+                $('html').removeClass('fancybox-lock fancybox-margin');
+            }
+       });
+
     });
 
     //busked close popup
@@ -317,7 +362,7 @@ function buskedFunc(){
         });
 
         $('.busked-sum-value-numb').text(sum);
-        $('.hidden-busked-sum').val(sum);
+        $('.busked-order-value-num').text(sum);
 
     }
 
@@ -447,6 +492,7 @@ function buskedFunc(){
     };
 
     someAjax('.busked-link a', 'loadItemsInBusked.php', loadItemsInBusked);
+    someAjax('.in-busket-text', 'loadItemsInBusked.php', loadItemsInBusked);
 
     buskedCountChange();
     removeItemFromBusked();
@@ -466,6 +512,10 @@ $(document).ready(function(){
     validate('.recover-form', {submitFunction:validationCallRecovery});
     validate('.registration-form', {submitFunction:validationCallREG});
     validate('.header-form-bottom');
+    validate('.order-form-main', {submitFunction:validationCall});
+
+    someAjax('.item-card-right-bottom-right a', 'ajax.php', lucky_cats_AddToBasket);
+
 });
 
 $(window).load(function(){

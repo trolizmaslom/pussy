@@ -208,6 +208,7 @@
 	.form{
 		.form_row{margin-bottom: 16px;
 			&:after{content:'';display: block;clear:both;}
+			&.submit{text-align: center;}
 		}
 		.form_input_wrap{text-align: left;
 			.form_input_title{font-weight: 700;font-size:14px;color:#bd864c;text-transform:uppercase;letter-spacing:0.75px;margin-bottom: 5px;}
@@ -221,6 +222,14 @@
 					}
 					&[type="password"]{
 						&+.errorText{top: calc(100% + 15px);width: auto;height: auto;opacity: 1;color:#b90404;font-size: 12px;}
+					}
+				}
+				textarea{resize:none;width:100%;background-color:#fff;border:1px solid #d4a16c;padding: 7px 7px;font-size: 14px;color:#000;border-radius: 5px;box-shadow:0 0 0 0 rgba(185, 4, 4, 0);transition:box-shadow 300ms ease, border-color 300ms ease;
+					&.error{border-color: red;box-shadow:0 0 5px 0 rgba(185, 4, 4, .75);
+						&::-webkit-input-placeholder {color:#b90404;}
+						&:-moz-placeholder {color:#b90404;}
+						&::-moz-placeholder {color:#b90404;}
+						&:-ms-input-placeholder {color:#b90404;}
 					}
 				}
 			}
@@ -317,6 +326,21 @@
 
 /* /busked */
 
+/* order-form */
+
+	.busked-order-fancybox{max-width: 500px;width: 100%!important;left:50%!important;transform:translate(-50%, 0);
+		.fancybox-inner{width: 100%!important;}
+		.order-form{padding: 50px 40px 20px 40px;
+			.order-form-title{font-size: 30px;font-weight: 700;color:#4e4e4e;margin-bottom: 25px;text-align: center;}
+			.busked-order-sum{text-align: center;padding-top:10px;margin-bottom: 30px;font-size: 30px;color:#4e4e4e;vertical-align: middle;
+				.busked-order-value{max-width: calc(100% - 85px);vertical-align: middle;}
+				.busked-order-value-num{max-width: calc(100% - 50px);}
+			}
+		}
+	}
+
+/* /order-form */
+
 /* fancybox */
 
 	.fancybox-close{right: 20px;top:20px;width: 31px;height: 31px;border-radius: 50%;background-image:none;background-color:#dcdcdc;cursor: pointer;transition:background-color 300ms ease;
@@ -324,6 +348,10 @@
 		 &:before{transform:rotate(-45deg);transform-origin:50% 0;}
 		 &:after{transform:rotate(45deg);transform-origin:50% 100%;}
 		 &:hover{background-color: #d24a43;}
+	}
+
+	.call-success{padding: 40px 40px 40px 40px;text-align: center;font-size: 30px;
+		.call-title{font-weight: 700;}
 	}
 
 /* /fancybox */

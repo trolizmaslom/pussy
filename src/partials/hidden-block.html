@@ -3,7 +3,7 @@
     <div id="call_success">
         <div class="call-success">
              <div class="call_success">
-                 <div class="call-title">Спасибо за заявку!</div>
+                 <div class="call-title">Спасибо за заказ!</div>
                  <div class="call-subtitle">Мы свяжемся с Вами в ближайшее время</div>
              </div>
         </div>
@@ -40,6 +40,19 @@
         </form>
     </div>
 
+    <div id="call_success_change" class='space-machine'>
+        <div class="conteiner-success">
+            <div class="row-name"></div>
+            <div class="row-button">
+                <div class="button-v-konce reset-page">
+                    <a  class="button">
+                        <span>Хорошо</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="busked">
         <div class="busked">
 
@@ -66,13 +79,10 @@
                                     </span>
                                 </div>
 
-                                <button class="button" type="submit">
+                                <button class="button" type="button">
                                     <span>оформить заказ</span>
                                 </button>
 
-                                <!-- hidden input for programmer -->
-
-                                <input type="hidden" name="basked_sum" class="hidden-busked-sum" />
                             </div>
                         </div>
                     </div>
@@ -82,19 +92,72 @@
         </div>
     </div>
 
-    <div id="call_success_change" class='space-machine'>
-        <div class="conteiner-success">
-            <div class="row-name"></div>
-            <div class="row-button">
-                <div class="button-v-konce reset-page">
-                    <a  class="button">
-                        <span>Хорошо</span>
-                    </a>
+    <div id="order-form">
+        <div class="order-form">
+
+            <div class="order-form-title">Оформление заказа</div>
+
+            <form action="ajax.php" class="order-form-main form">
+
+                <div class="form_row">
+                    <div class="form_input_wrap">
+                        <div class="form_input_title">Имя</div>
+                        <div class="form_input">
+                            <input type="text" name="first_name" placeholder="Введите имя" required="required" />
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="form_row">
+                    <div class="form_input_wrap">
+                        <div class="form_input_title">Фамилия</div>
+                        <div class="form_input">
+                            <input type="text" name="second_name" placeholder="Введите фамилию" required="required" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_input_wrap">
+                        <div class="form_input_title">Телефон</div>
+                        <div class="form_input">
+                            <input type="text" class="tel-mask" name="telefone" placeholder="Введите телефон" required="required" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_input_wrap">
+                        <div class="form_input_title">Адрес</div>
+                        <div class="form_input">
+                            <textarea name="address" rows="4" placeholder="Введите адрес" required="required"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_input_wrap">
+                        <div class="form_input_title">Коментарий</div>
+                        <div class="form_input">
+                            <textarea name="comment" rows="4" placeholder="Введите коментарий"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="busked-order-sum">
+                        <span class="busked-order-sum-text">Итого:</span>
+                        <span class="busked-order-value">
+                            <span class="busked-order-value-num"></span>
+                            <span class="busked-order-sum-currency">руб</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form_row submit">
+                    <button class="button green-button" type="submit">
+                        <span>Отправить</span>
+                    </button>
+                </div>
+
+            </form>
         </div>
     </div>
-
-
 
 </div>

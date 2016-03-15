@@ -279,6 +279,14 @@
 
 	/* /busked */
 
+	/* order-form */
+
+		.busked-order-fancybox{width: calc(100% - 20px)!important;
+			.order-form{padding: 50px 20px 20px 20px;}
+		}
+
+	/* /order-form */
+
 }
 @media screen and (max-width: 479px){
 
