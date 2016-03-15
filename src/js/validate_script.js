@@ -253,6 +253,40 @@ function validationCallREG(form){
     });
 }
 
+//ajax func for programmer
+
+function someAjax(item, someUrl, someData, successFunc){
+
+    $(document).on('click', item, function(e){
+
+        e.preventDefault();
+
+        $.ajax({
+            url:someUrl,
+            data:someData,
+            method:'POST',
+            success : function(data){
+                successFunc();
+            }
+        });
+
+    });
+
+}
+
+/* example for someAjax func
+
+    write like this
+    someAjax('.link', '/programer_item.php', {action:'someAction', item_id:id}, someFuncName);
+
+    or
+
+    someAjax('.link', '/programer_item.php', {action:'someAction', item_id:id}, someFuncName(data){
+        ...
+    });
+
+*/
+
 //busked func
 function buskedFunc(){
 
