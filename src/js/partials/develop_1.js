@@ -100,7 +100,6 @@ function headerShowForm(){
 };
 
 
-
 $(document).ready(function(){
 
 	headerMenuHover();
@@ -111,7 +110,7 @@ $(document).ready(function(){
 
 $(window).load(function(){
 
-    buskedFunc();
+
 
 });
 

@@ -253,6 +253,34 @@ function validationCallREG(form){
     });
 }
 
+//ajax func for programmer
+
+function someAjax(item, someUrl, successFunc, someData){
+
+    $(document).on('click', item, function(e){
+
+        e.preventDefault();
+
+        $.ajax({
+            url:someUrl,
+            data:someData,
+            method:'POST',
+            success : function(data){
+                successFunc(data);
+            }
+        });
+
+    });
+
+}
+
+/* example for someAjax func
+
+    write like this
+    someAjax('.link', '/programer_item.php', someFuncName, {action:'someAction', item_id:id});
+
+*/
+
 //busked func
 function buskedFunc(){
 
@@ -316,12 +344,14 @@ function buskedFunc(){
 
         if(!itemsLength){
 
-            $('.busked-wrapper-fancybox .busked-buttons').addClass('hide');
-            $('.busked-items-wrap').prepend(emptyText);
+            $('.busked-buttons').addClass('hide');
+            if(!$(".busked-items-wrap .empty-busked").length){
+                $('.busked-items-wrap').prepend(emptyText);
+            }
 
         }else{
 
-            $('.busked-wrappper-fancybox .busked-buttons').removeClass('hide');
+            $('.busked-buttons').removeClass('hide');
             if($(".busked-items-wrap .empty-busked").length != 0){
                 $('.busked-items-wrap .empty-busked').remove();
             }
@@ -408,46 +438,21 @@ function buskedFunc(){
 
     };
 
+    function loadItemsInBusked(data){
+
+        $('.busked-items-wrap').html(data);
+        buskedSumByLoad();
+        isThereItemsInBusked();
+
+    };
+
+    someAjax('.busked-link a', 'loadItemsInBusked.php', loadItemsInBusked);
+
     buskedCountChange();
-    buskedSumByLoad();
-    isThereItemsInBusked();
     removeItemFromBusked();
 
-}
+};
 
-//ajax func for programmer
-
-function someAjax(item, someUrl, someData, successFunc){
-
-    $(document).on('click', item, function(e){
-
-        e.preventDefault();
-
-        $.ajax({
-            url:someUrl,
-            data:someData,
-            method:'POST',
-            success : function(data){
-                successFunc();
-            }
-        });
-
-    });
-
-}
-
-/* example for someAjax func
-
-    write like this
-    someAjax('.link', '/programer_item.php', {action:'someAction', item_id:id}, someFuncName);
-
-    or
-
-    someAjax('.link', '/programer_item.php', {action:'someAction', item_id:id}, someFuncName(data){
-        ...
-    });
-
-*/
 
 $(document).ready(function(){
     validate('#call-popup .contact-form', {submitFunction:validationCall});
@@ -461,4 +466,10 @@ $(document).ready(function(){
     validate('.recover-form', {submitFunction:validationCallRecovery});
     validate('.registration-form', {submitFunction:validationCallREG});
     validate('.header-form-bottom');
+});
+
+$(window).load(function(){
+
+    buskedFunc();
+
 });
