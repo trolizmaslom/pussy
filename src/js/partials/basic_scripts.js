@@ -48,7 +48,7 @@ function oneHeightItemsMain1(){
         block.css('height', height);
     }
 
-    oneHeight($('.single-item'));
+    oneHeight($('.convert-box-pop .single-item'));
 }
 
 function oneHeightItemsMain2(){
@@ -128,6 +128,7 @@ function cutText(){
 /* DOCUMENT READY  */
 $(document).ready(function() {
     //oneHeightItems();
+    
 
     $('.footer-placeholder').height($('.footer').outerHeight());
 
@@ -135,6 +136,7 @@ $(document).ready(function() {
 
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
+       // oneHeightItemsMain1();
     };
 
     //goTo();
@@ -145,6 +147,7 @@ $(window).resize(function() {
 
     if ($(window).width() > 993) {
         oneHeightItemsMain2();
+        //oneHeightItemsMain1();
     };
 
     $('.footer-placeholder').height($('.footer').outerHeight());
