@@ -286,8 +286,11 @@ function someAjax(item, someUrl, successFunc, someData){
 // change button when item added to basket
 
 function lucky_cats_AddToBasket(data, itemObject){
-
-    $('.basked-icon-value span').html(data);
+    if($('.basked-icon-value').length){
+        $('.basked-icon-value span').html(data);
+    }else{
+       $('.busked-icon').prepend('<span class="basked-icon-value"><span>'+data+'</span></span>');
+    }
 
     var buttonWrap = itemObject.parents('.add-to-busked-wrap').addClass('active');
 
