@@ -289,7 +289,7 @@ function lucky_cats_AddToBasket(data, itemObject){
 
     $('.basked-icon-value span').html(data);
 
-    var buttonWrap = itemObject.parents('.item-card-right-bottom-right').addClass('active');
+    var buttonWrap = itemObject.parents('.add-to-busked-wrap').addClass('active');
 
 }
 
@@ -523,7 +523,7 @@ $(document).ready(function(){
     validate('.header-form-bottom');
     validate('.order-form-main', {submitFunction:validationCall});
 
-    someAjax('.item-card-right-bottom-right a', 'ajax.php', lucky_cats_AddToBasket);
+    someAjax('.add-to-busked-wrap a', 'ajax.php', lucky_cats_AddToBasket);
 
 });
 

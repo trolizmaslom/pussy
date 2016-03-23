@@ -157,6 +157,24 @@
        .item-card-hidden{position: absolute;left: -99999em;top: -99999em;}
     }
 
+    .add-to-busked-wrap{position: relative;height: 50px;
+        a{max-width: 220px;transition:color 500ms ease, transform 300ms ease;}
+        .in-busket-text{display:inline-block;position:absolute;left:calc(50% - 64px);top:calc(50% - 12px);font-size: 20px;vertical-align: middle;text-transform: uppercase;opacity:0;cursor:pointer;transition:opacity 300ms ease 300ms;
+            span{display: inline-block;}
+            .in-busked-icon{width: 18px;height: 18px;background-image:url(../images/basked-icon.png);background-repeat: no-repeat;margin-left: 5px;position: relative;
+                &:before{content:'';display: block;position: absolute;width: 18px;height: 18px;background-image: url(../images/basked-icon-hover.png);background-repeat: no-repeat;opacity:0;transition:opacity 300ms ease;}
+            }
+        }
+        &.active{
+            .in-busket-text{opacity:1;transition:opacity 300ms ease, color 300ms ease;
+                &:hover{color:#90bcb2;
+                    .in-busked-icon:before{opacity: 1;}
+                }
+            }
+            a{transform:scale(0);}
+        }
+    }
+
     /*popup*/
 
         .item-card-fancy{
