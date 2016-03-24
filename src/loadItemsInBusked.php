@@ -14,7 +14,7 @@
             </div>
             <div class="busked-description-count">
 
-                <div class="count-button count-minus disable"></div>
+                <div class="count-button count-minus"></div>
                 <div class="count-input">
                     <input type="text" value="0" />
                 </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="busked-description-count">
 
-                <div class="count-button count-minus disable"></div>
+                <div class="count-button count-minus"></div>
                 <div class="count-input">
                     <input type="text" value="0" />
                 </div>

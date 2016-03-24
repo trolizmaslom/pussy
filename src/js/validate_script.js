@@ -376,6 +376,11 @@ function buskedFunc(){
         var point = 1;
 
         $('.busked-item').each(function(){
+
+            if($(this).find('.count-input input').val() == 0){
+                $(this).find('.count-minus').addClass('disable');
+            }
+
             buskedItemSum($(this));
             if(point>=itemsLength){
                 buskedAllSum();
