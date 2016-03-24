@@ -23,7 +23,8 @@
         h3 span{display: block; width: 100%;}
         i{display: none;}
     }
-    .convert-box-pop .single-item { float: none; width: 80%; margin: 20px 10%; padding-bottom: 60px;
+    .convert-box-pop .single-item { float: none; width: 80%; margin: 20px auto; padding-bottom: 60px;
+        img{max-height: 100%;}
         .aftertext .pricing {width: 100px;}
         .button-v-konce { width: auto;  bottom: 0;  right: 20%; left: 20%;
             .button{max-width: 100%;}

@@ -145,12 +145,12 @@ $border:#c48e58;
             img{position: absolute; max-width: none; left:50%; transform:translateX(-50%);}
         }
         .contacts-wrapp{ position: absolute; top:0; width:100%;     padding-top: 140px;
-            .left-sect{float:left; width:50%;     padding: 0 76px 0 8px;
-                .title-text{color:#e5a165;     padding-bottom: 63px;}
+            .left-sect{float:left; width:50%;padding: 0 76px 0 8px;
+                .title-text{color:#e5a165;padding-bottom: 63px;}
                 .form-wrap{width:100%;
-                    .item-d{width:100%; border-bottom: 1px solid $border;     padding-bottom: 7px;     margin-bottom: 21px;
-                        .titl{text-align: left; width:75px; display: inline-block; font: 700 18px/18px 'PFDinTextPro'; color:#bd864c;}
-                        .desc{float:right;text-align: right;display: inline-block; font: 400 18px/18px 'PFDinTextPro'; color:#747474;  }
+                    .item-d{width:100%;padding-bottom: 7px;margin-bottom: 21px;
+                        .titl{text-align: left; width:75px; display: inline-block; font: 700 18px/18px 'PFDinTextPro'; color:#bd864c;float: left;}
+                        .desc{float:left;text-align: right;display: inline-block; font: 400 18px/18px 'PFDinTextPro'; color:#747474;  }
                     }
                     .quest{font: 700 18px/25px 'PFDinTextPro'; color:#d39f68;padding-top: 22px;     padding-bottom: 4px;}
                     .contacts-form{
@@ -258,7 +258,7 @@ $border:#c48e58;
             .buttons_form_wrap{text-align: center;
                 .button span{height: 50px;}
             }
-            .pass-check{    padding: 11px 0 0 33px; opacity:0;     height: 30px; transition: opacity 300ms;
+            .pass-check{padding: 11px 0 0 33px; opacity:0;height: 30px;transition: opacity 300ms;
                 p{font:500 14px/17px 'PFDinTextPro'; position: relative;
                     &:before{content: ''; display: block; position: absolute; left:-27px; background-repeat: no-repeat; background-position: center; top:-4px; width: 25px; height: 25px;}
                     &:nth-child(1){color:#618870;
