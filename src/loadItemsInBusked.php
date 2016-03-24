@@ -16,7 +16,7 @@
 
                 <div class="count-button count-minus"></div>
                 <div class="count-input">
-                    <input type="text" value="0" />
+                    <input type="text" value="1" />
                 </div>
                 <div class="count-button count-plus"></div>
 
@@ -47,7 +47,7 @@
 
                 <div class="count-button count-minus"></div>
                 <div class="count-input">
-                    <input type="text" value="0" />
+                    <input type="text" value="1" />
                 </div>
                 <div class="count-button count-plus"></div>
 

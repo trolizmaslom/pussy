@@ -377,7 +377,7 @@ function buskedFunc(){
 
         $('.busked-item').each(function(){
 
-            if($(this).find('.count-input input').val() == 0){
+            if($(this).find('.count-input input').val() == 1){
                 $(this).find('.count-minus').addClass('disable');
             }
 
@@ -425,13 +425,13 @@ function buskedFunc(){
             if(!$(this).is('.disable')){
                 if($(this).is('.count-minus')){
                     inputValue--;
-                    if(inputValue == 0){
+                    if(inputValue == 1){
                         $(this).addClass('disable');
                     }
                 }
                 else if($(this).is('.count-plus')){
                     inputValue++;
-                    if(inputValue>0){
+                    if(inputValue>1){
                         parent.find('.count-minus').removeClass('disable');
                     }
                 }
