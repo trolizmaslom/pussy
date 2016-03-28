@@ -45,6 +45,7 @@ function itemCard(wrapper){
                 if($(this).is('.slick-current')){
                     return false;
                 }
+
                 var img = $(this).find('img').attr('src');
                 $wrap.find('.item-card-img-item').removeClass('slick-current');
                 $(this).addClass('slick-current');
@@ -103,13 +104,13 @@ function itemCard(wrapper){
                     $wrap.find('.slick-next').show();
                 }
             }
-            $(document).on('click', wrapper, function() {
+            /*$(document).on('click', wrapper, function() {
                 showHideArrow();
                 var imgs =$wrap.find('.item-card-img-item.slick-current').find('img').attr('src');
                 $wrap.find('.item-card-main-img').find('img').fadeOut('300', function() {
                     $(this).attr('src', imgs).fadeIn(500);
                 });
-            });
+            });*/
         }
     }
 }

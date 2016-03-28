@@ -150,7 +150,7 @@
 			.header-form{background-color: #fff;border-radius: 25px 0 25px 25px;padding:25px 40px 20px 40px;position: relative;z-index: 1;
 				&:before{content: '';display: block;position: absolute;right:0;bottom:100%;width: 0;height: 0;border-width: 13px;border-style:solid;border-color:transparent #fff #fff transparent;}
 				.header-enter-title{font-weight: 700;font-size: 18px;color:#6c484e;text-transform: uppercase;margin-bottom: 40px;line-height: 22px;}
-				.buttons_form_main{padding-top: 50px;margin-bottom: 25px;
+				.buttons_form_main{margin-bottom: 25px;
 					.buttons_form_wrap{margin-bottom: 10px;
 						&:last-child{margin-bottom: 0;}
 					}
