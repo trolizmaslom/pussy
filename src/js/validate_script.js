@@ -16,6 +16,14 @@ function validate(form, options){
             errorClass : 'errorText',
             focusCleanup : false,
             focusInvalid : false,
+            rules: {
+                order_email: {
+                  require_from_group: [1, ".mygroup"]
+                },
+                order_phone: {
+                  require_from_group: [1, ".mygroup"]
+                },
+            },
             invalidHandler: function(event, validator) {
                 if(typeof(setings.errorFunction) === 'function'){
                     setings.errorFunction(form);
