@@ -75,11 +75,12 @@
         .construct-impl{color: #e5a165;background-image: url(../images/bg-l2-cat.jpg); background-size: 367px 419px; background-position: left bottom; background-repeat: no-repeat;}
     }
 }
+.news-img{ float:left;margin:0 20px 20px 0;max-width: 40%;}
 .conteiner-inside{
     .config-comn{ width: 100%;  background-color: rgba(255, 255, 255, 0.9);}
     .fix-class{padding-top: 55px;}
 
-    .news-lol-scroll{position: relative;color: black; width: 100%; height: 300px;
+    .news-lol-scroll{position: relative;color: black; width: 100%; height: 600px;
 
         h3{display: table; padding-bottom: 30px;position: relative; margin-bottom: 30px; text-transform: uppercase; padding-top: 10px;
             span{position: relative; display: table-cell; font-family: 'PFDinTextPro'; font-size: 24px; line-height: 26px; font-weight: 500; width:calc(100% - 115px); }

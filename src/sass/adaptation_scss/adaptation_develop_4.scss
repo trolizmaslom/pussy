@@ -17,7 +17,7 @@
     .top-block .title-text:after{right: 1px;top: -62%;}
     /*/top-block*/
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1400px){
     /*like massonry*/
     .paral-cat-1{display: none;}
     .paral-cat-2{display: none;}
@@ -118,8 +118,7 @@
     .item-card-main-img{height: 360px !important;max-width: 360px !important;float: none !important;display: block;margin:0 auto;margin-bottom: 100px;}
     .item-card-column{float: none !important;max-width: 360px !important;width: 100%;position: absolute;bottom: 0;margin-bottom: 0;transform: translateX(-50%);left: 50%;}
     .item-card-img{position: relative;}
-    .item-card-img-item,#item-card-pop .item-card-img-item{height: 80px !important;width: 80px;margin:0 5px;}
-
+    .item-card-img-item,#item-card-pop .item-card-img-item{height: 80px !important;width: 80px;margin:0 5px;float: left;}
     .item-card-column .slick-prev,.item-card-column .slick-next{top: 50%;transform: translate(-50%, -50%) rotate(-45deg);left: auto;bottom: auto;
         &:before{content: '';}
     }

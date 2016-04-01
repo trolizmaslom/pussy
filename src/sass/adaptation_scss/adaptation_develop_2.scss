@@ -17,7 +17,7 @@
 }
 @media screen and (max-width: 992px){
     .delivery-wrap .convert-delivery .after-content .row .sliced-row{width: 100%; float: none;    padding: 10px 0;}
-
+    .conteiner-inside{padding-bottom: 40px;}
     .conteiner-inside .news-lol-scroll {
         h3 i { display: block; position: static;}
         h3 span{display: block; width: 100%;}
@@ -46,7 +46,7 @@
     .breadrcrumbs{display: none;}
 
     .conteiner-inside .content-more{margin: 0 auto; max-width: 80%;
-        img {float: none; display: block; max-width: 100%; width: 100%;}
+        img {float: none; display: block; max-width: 100%; margin: 0 auto;}
         h3 { padding-top: 10px;    width: 100%;}
         p{padding-bottom: 25px; max-height: none;}
         .button-v-konce {position: static; width: 100%;
@@ -78,7 +78,7 @@
         .after-block { margin-left: 0px;}
         .element-img {margin: 0 10px 10px 0;}
     }
-
+    .news-img{max-width:none; width: 100%; text-align: center;}
     #popular-item .popular-wrap { padding-top: 50px; padding-bottom: 80px;}
 
     .convert-box-pop .single-item { float: none; width: 80%; margin: 20px 10%;
@@ -101,6 +101,11 @@
                  .hide-pass {text-align: left; width: 250px;}
             }
             .naming {float: none; }
+        }
+    }
+    .conteiner-inside{
+        .news-lol-scroll{
+            h3{}
         }
     }
 
