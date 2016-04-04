@@ -300,7 +300,7 @@ function lucky_cats_AddToBasket(data, itemObject){
        $('.busked-icon').prepend('<span class="basked-icon-value"><span>'+data+'</span></span>');
     }
 
-    var buttonWrap = itemObject.parents('.add-to-busked-wrap').addClass('active');
+    $('.add-to-busked-wrap').addClass('active');
 
 }
 
@@ -373,7 +373,38 @@ function buskedFunc(){
         });
 
         $('.busked-sum-value-numb').text(sum);
-        $('.busked-order-value-num').text(sum);
+
+        if($('.delivery-price-select').is('.jq-selectbox')){
+            $('.delivery-price-sellect').styler('destroy');
+        }
+
+        if(sum < 5000){
+            $('.delivery-price-select option').eq(0).attr('value','400').text('Доставка до 5000 руб. до подъезда в пределах МКАД');
+        }else{
+            $('.delivery-price-select option').eq(0).attr('value','0').text('Доставка свыше 5000 руб. до подъезда в пределах МКАД');
+        }
+        var orderSum = sum + parseInt($('.delivery-price-select option:selected').val());
+
+        $('.busked-order-value-num').text(orderSum);
+        $('.delivery-price').text(parseInt($('.delivery-price-select option:selected').val())+' руб.');
+        $('.delivery-price-select').styler();
+
+    }
+
+    //change delivery price
+    function changeDelivery(){
+
+        $(document).on('change', '.delivery-price-select', function(){
+
+            var deliveryPrice = parseInt($(this).find('option:checked').val());
+
+            var itemsPrice = parseInt($('.busked-sum-value-numb').text());
+
+            $('.delivery-price').text(deliveryPrice+' руб.');
+
+            $('.busked-order-value-num').text(itemsPrice + deliveryPrice);
+
+        });
 
     }
 
@@ -521,6 +552,7 @@ function buskedFunc(){
 
     buskedCountChange();
     removeItemFromBusked();
+    changeDelivery();
 
 };
 

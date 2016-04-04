@@ -337,6 +337,25 @@
 				.busked-order-value-num{max-width: calc(100% - 50px);}
 			}
 		}
+		.form-select{
+			&.jq-selectbox{width: 100%;font-size: 14px;
+				.jq-selectbox__select{width: 100%;padding:5px 5px;background-color:#fff;border-radius:5px;border:1px solid #d4a16c;z-index: 1;}
+				.jq-selectbox__select-text{max-width:calc(100% - 30px);cursor: pointer;}
+				.jq-selectbox__trigger{position: absolute;right: 7px;top:calc(75% - 9px);width: 0;height: 0;border-width: 7px 5px;border-style:solid;border-color:#d4a16c transparent transparent transparent;transform-origin:50% 50%;}
+				.jq-selectbox__dropdown{width: 100%;background-color: #fff;border-radius: 0 0 5px 5px;border:1px solid #d4a16c;margin-top: -5px;z-index: 0;
+					ul{padding: 10px 5px 5px 5px;
+						li{margin-bottom: 5px;cursor:pointer;transition:color 300ms ease;
+							&:last-child{margin-bottom: 0;}
+							&:hover{color:#d4a16c;}
+						}
+					}
+				}
+				&.dropdown{
+					.jq-selectbox__trigger{transform:rotate(-180deg);top:calc(45% - 9px);}
+				}
+			}
+		}
+		.delivery-price{font-size: 20px;padding-top: 5px;text-align: center;}
 	}
 
 /* /order-form */
